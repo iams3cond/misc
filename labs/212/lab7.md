@@ -50,13 +50,17 @@ Then simply think of the middle element in each subtree as the root:
 
 ![reconstructing](https://github.com/Welchd1/misc/labs/212/figures/split.png)
 
-If you have a tree has an odd number of nodes, find the middle node in the output and 
-split each left and right subtree in a manner similar to the above.
+If you have a tree has an odd number of nodes, find the middle node in the output (this 
+will be the topmost root) then proceeed to split each left and right subtree in the manner 
+described above.
 
-This isn't a terrible scalable or foolproof method, but good enough drawing out smaller,
-hand built trees -- something we'll be doing in this lab.
+This isn't a very scalable or foolproof method by any means, but it's good enough to help
+one draw out smaller, hand-built trees -- which is something you will likely want to do in
+this lab.  
 
-## 
+## Task
 
+You can find the starter kit for the lab [here](https://github.com/dtwelch/misc/tree/master/labs/212/src).
+This contains `bst.h` 
 
 ### closing thoughts: disadvantages, 
