@@ -35,12 +35,12 @@ Once the tree is built, a call to `dump_contents` will print an in-order travers
 
 Below is a visualization of the tree written above.
 
-![resulting bst](https://github.com/dtwelch/misc/blob/master/labs/212/figures/bst.png =400x313)
+<img src="https://github.com/dtwelch/misc/blob/master/labs/212/figures/bst.png" width="400">
 
-Given just the raw inorder traversal output to work with, it can take a little time and 
-practice to figure out how to visually construct the tree as it appears above. If
-tree is relatively small, one relatively simple way to do so is to split the output in 
-terms of subtrees. 
+Given just the raw inorder traversal output to work with in the example section, it can 
+take a little time and practice to figure out how to visually construct the tree as it 
+appears above. If tree is relatively small, one relatively simple way to do so is to 
+split the output in terms of subtrees. 
 
 For example, since the tree above has an even number of nodes (greater than 2): 
 
@@ -48,7 +48,7 @@ For example, since the tree above has an even number of nodes (greater than 2):
 
 Then simply think of the middle element in each subtree as the root:
 
-![reconstructing](https://raw.githubusercontent.com/dtwelch/misc/master/labs/212/figures/split.png)
+<img src="https://github.com/dtwelch/misc/blob/master/labs/212/figures/split.png" width="400">
 
 If you have a tree has an odd number of nodes, find the middle node in the output (this 
 will be the topmost root) then proceeed to split each left and right subtree in the manner 
@@ -56,7 +56,7 @@ described above.
 
 This isn't a very scalable or foolproof method by any means, but it's good enough to help
 one draw out smaller, hand-built trees -- which is something you will likely want to do in
-this lab.
+this lab when trying make sense of the output following various insertions and removals.
 
 ### Task
 
@@ -79,35 +79,20 @@ private:
 ```
 
 You are to implement the `insert` and `remove` methods. You can do so either recursively 
-or iteratively (though in lab we'll discuss the iterative approach for both).
+or iteratively (though this handout and in lab we restrict discussion to the iterative 
+approach for both).
 
 #### `insert`
 
-The procedure for inserting into a binary search tree, by far the easier of the two 
-operations, really boils down to knowing exactly which existing node to hang the new 
-node from. Once this existing node is found, all we then have to do is figure out on 
-which side our new node should be hung (left or right -- what property defines this for us?)
-
-To summarize, a sketch of the algorithm described above for inserting some node, 
-say `e`, goes something like this:
-
-```
-is the tree empty? 
-	if so, set root and increment the node count
-otherwise
-	find an existing node, j, in the tree from which to attach e (hint: read the header)
-	if e.val < j.val
-		increment count, and link up e
-	elseif e.val > j.val
-		increment count, link up e
-	else
-		error: duplicate 
-```
+The procedure for inserting into a binary search tree -- by far the easier of the two 
+operations -- really boils down to knowing which existing node in tree we should use to
+hang the new node from. Once found, all we  have to do is figure out on which side the 
+new node should be hung (left or right -- which property defines this for us?)
 
 #### `remove` 
 
-Remove is considerably more complicated. As is typically of bigger, tougher problems, 
-we'll break our solution into three distinct cases:
+Remove is considerably more complicated. As we typically do (should!) for bigger, 
+imposing problems, we break our solution into three distinct cases/steps:
 
 
 
