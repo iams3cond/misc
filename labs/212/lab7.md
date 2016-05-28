@@ -35,7 +35,7 @@ Once the tree is built, a call to `dump_contents` will print an in-order travers
 
 Below is a visualization of the tree written above.
 
-![resulting bst](https://github.com/dtwelch/misc/blob/master/labs/212/figures/bst.png)
+![resulting bst](https://github.com/dtwelch/misc/blob/master/labs/212/figures/bst.png =400x313)
 
 Given just the raw inorder traversal output to work with, it can take a little time and 
 practice to figure out how to visually construct the tree as it appears above. If
