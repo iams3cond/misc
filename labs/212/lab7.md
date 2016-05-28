@@ -1,6 +1,6 @@
 ## Binary Search Trees
 
-The objective of this lab is to implement the core algorithms behind the canonical 
+The objective of this lab is to implement some of the core algorithms behind the canonical 
 binary search tree data structure discussed in lecture: namely the `insert` and `remove` 
 methods.
 
@@ -58,9 +58,53 @@ This isn't a very scalable or foolproof method by any means, but it's good enoug
 one draw out smaller, hand-built trees -- which is something you will likely want to do in
 this lab.  
 
-## Task
+### Task
 
 You can find the starter kit for the lab [here](https://github.com/dtwelch/misc/tree/master/labs/212/src).
-This contains `bst.h` 
+You are given a simple binary search tree class (in `bst.h`) which contains the following
+methods:
+
+```c++
+public:
+	void insert(T e);			//insert e into this tree 
+	
+	bool remove(const T e);		//remove first element with key equal to e
+	bool contains(T e);			//returns true iff e is in this bst; false otherwise
+	void dump_contents() const; // print contents of this bst in order
+
+private:
+	bool insert(bst_node *e); //returns true iff e was inserted; false otherwise
+	void in_order(bst_node *e) const;
+	bst_node *search_for(T e) const; 
+```
+
+You are to implement the `insert` and `remove` methods. You can do so either recursively 
+or iteratively (though in lab we'll discuss the iterative approach for both).
+
+#### `insert`
+
+The procedure for inserting into a binary search tree, by far the easier of the two 
+operations, really boils down to knowing exactly which existing node to hang the new 
+node from. Once this existing node is found, all we then have to do is figure out on 
+which side our new node should be hung (left or right -- what property defines this for us?)
+
+To summarize, a sketch of the algorithm described above for inserting some node, 
+say `e`, goes something like this:
+
+```
+is the tree empty? 
+	if so, set root and increment the node count
+otherwise
+	find an existing node, j, in the tree from which to attach e (hint: read the header)
+	if e.val < j.val
+		increment count, and link up e
+	elseif e.val > j.val
+		increment count, link up e
+	else
+		error: duplicate 
+```
+
+#### `remove` 
+
 
 ### closing thoughts: disadvantages, 
