@@ -106,5 +106,9 @@ otherwise
 
 #### `remove` 
 
+Remove is considerably more complicated. As is typically of bigger, tougher problems, 
+we'll break our solution into three distinct cases:
+
+
 
 ### closing thoughts: disadvantages, 
