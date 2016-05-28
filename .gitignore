@@ -1,0 +1,16 @@
+.idea/
+.DS_Store
+.DS_Store?
+target/
+build/
+dist/
+lib/
+
+# Generated files
+/gen/
+tmp/
+
+# Configurable build files
+bilder.py
+bilder.pyc
+bild.log
