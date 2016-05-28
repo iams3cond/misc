@@ -56,12 +56,12 @@ described above.
 
 This isn't a very scalable or foolproof method by any means, but it's good enough to help
 one draw out smaller, hand-built trees -- which is something you will likely want to do in
-this lab when trying make sense of the output following various insertions and removals.
+this lab when trying make sense of the output after various insertions and removals.
 
 ### Task
 
 You can find the starter kit for the lab [here](https://github.com/dtwelch/misc/tree/master/labs/212/src).
-You are given a simple binary search tree class (in `bst.h`) which contains the following
+You are given a simple binary search tree class (`bst.h`) which contains the following
 methods:
 
 ```c++
@@ -79,20 +79,36 @@ private:
 ```
 
 You are to implement the `insert` and `remove` methods. You can do so either recursively 
-or iteratively (though this handout and in lab we restrict discussion to the iterative 
-approach for both).
+or iteratively (though in this handout and in lab itself we'll restrict discussion to the 
+iterative approach).
 
 #### `insert`
 
-The procedure for inserting into a binary search tree -- by far the easier of the two 
-operations -- really boils down to knowing which existing node in tree we should use to
-hang the new node from. Once found, all we  have to do is figure out on which side the 
-new node should be hung (left or right -- which property defines this for us?)
+The procedure for inserting into a binary search tree -- by far the easier of the two -- 
+really just boils down to knowing which existing node in tree we should hang the new node 
+from. Once found, all we need to do is figure out on which side it should be hung on --
+left or right. Which property defines this for us?
 
 #### `remove` 
 
-Remove is considerably more complicated. As we typically do (should!) for bigger, 
-imposing problems, we break our solution into three distinct cases/steps:
+Removing from a binary search tree is considerably more involved. Assuming we have already 
+found the node we want to remove in the tree (say, `e`), we decompose the problem down 
+into three separate cases:
+
+ * Node `e` is a leaf. This is a degenerate case, meaning it's safe to just delete `e`.. 
+ No need to worry about reconfiguring/transplanting children -- as leafs by definition 
+ lack children.
+ 
+ * Node `e` has one child. We delete `e` and connect its child to `e`'s old parent.
+ 
+ * Node `e` has two children. To handle this we use a trick. First, from `e`, go right
+ once then retrieve the node as far down left as possible -- this effectively gives us the 
+ minimum value in this particular subtree. Next, replace the element stored in `e` with
+ the found minimum. This will result in a duplicate in the right subtree, but it can be
+ handled by one of the two other cases (it's guaranteed to have at most one child -- why?)
+ 
+
+
 
 
 

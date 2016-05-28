@@ -8,14 +8,7 @@ void bst::insert(T e) {
 	insert(new bst_node(e));
 }
 
-bool bst::insert(bst_node *candidate) {
-	//TODO
-	return true;
-}
 
-bool bst::remove(T e) {
-	return false;
-}
 
 bool bst::contains(T e) {
 	bool result = count != 0;
