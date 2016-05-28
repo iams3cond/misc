@@ -56,7 +56,7 @@ described above.
 
 This isn't a very scalable or foolproof method by any means, but it's good enough to help
 one draw out smaller, hand-built trees -- which is something you will likely want to do in
-this lab.  
+this lab.
 
 ### Task
 
