@@ -50,10 +50,6 @@ Then simply think of the middle element in each subtree as the root:
 
 <img src="https://github.com/dtwelch/misc/blob/master/labs/212/figures/split.png" width="400">
 
-If you have a tree has an odd number of nodes, find the middle node in the output (this 
-will be the topmost root) then proceeed to split each left and right subtree in the manner 
-described above.
-
 This isn't a very scalable or foolproof method by any means, but it's good enough to help
 one draw out smaller, hand-built trees -- which is something you will likely want to do in
 this lab when trying make sense of the output after various insertions and removals.
@@ -101,11 +97,17 @@ into three separate cases:
  
  * Node `e` has one child. We delete `e` and connect its child to `e`'s old parent.
  
- * Node `e` has two children. To handle this we use a trick. First, from `e`, go right
- once then retrieve the node as far down left as possible -- this effectively gives us the 
- minimum value in this particular subtree. Next, replace the element stored in `e` with
- the found minimum. This will result in a duplicate in the right subtree, but it can be
- handled by one of the two other cases (it's guaranteed to have at most one child -- why?)
+ * Node `e` has two children. This is the most complicated case, so to make our lives 
+ easier, we use a trick: We're going to change the tree to an different 
+ (though equivalent) form which will allow us to simply delete the 
+ node in question we want using one of the (simpler) cases listed above. 
+ 
+ To do this, first
+ from `e`, go right once -- then retrieve the node as far down left as possible.
+ This effectively gives us the  minimum value in this particular subtree. Next, replace 
+ the element stored in `e` with the minimum we just found. This will result in a duplicate 
+ in the right subtree, but it can be handled by one of the two other cases 
+ (it's guaranteed to have at most one child -- why?)
  
 
 

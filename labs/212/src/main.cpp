@@ -1,16 +1,27 @@
 #include "bst.h"
 
 int main() {
-	bst *T = new bst();
+	bst *t = new bst();
+	/*
+	t->insert(3);
+	t->insert(2);
+	t->insert(4);
+	t->insert(6);
+	t->insert(5);
+	t->insert(8);
+	//t->remove(8);
+	*/
 	
-	T->insert(3);
-	T->insert(2);
-	T->insert(4);
-	T->insert(6);
-	T->insert(5);
-	T->insert(8);
-	
-	T->dump_contents();
+
+	t->insert(3);
+	t->insert(2);
+	t->insert(4);
+	t->insert(6);
+	t->insert(5);
+	t->insert(8);
+	t->remove(6);
+
+	t->dump_contents();
 
 	return 0;
 }
