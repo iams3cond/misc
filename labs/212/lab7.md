@@ -1,6 +1,6 @@
 ## Binary Search Trees
 
-The objective of this lab is to implement some of the core algorithms behind the canonical 
+The objective of this lab is to implement some of the core algorithms for the canonical 
 binary search tree data structure discussed in lecture: namely the `insert` and `remove` 
 methods.
 
@@ -54,6 +54,10 @@ This isn't a very scalable or foolproof method by any means, but it's good enoug
 one draw out smaller, hand-built trees -- which is something you will likely want to do in
 this lab when trying make sense of the output after various insertions and removals.
 
+If you have a tree drawn already, and you want a quick means of ensuring that the in order 
+printout represents the same thing, simply read the nodes off one by one, 
+left to right.
+
 ### Task
 
 You can find the starter kit for the lab [here](https://github.com/dtwelch/misc/tree/master/labs/212/src).
@@ -82,7 +86,7 @@ iterative approach).
 
 The procedure for inserting into a binary search tree -- by far the easier of the two -- 
 really just boils down to knowing which existing node in tree we should hang the new node 
-from. Once found, all we need to do is figure out on which side it should be hung on --
+from. Once found, all we need to do is figure out on which side it should be hung --
 left or right. Which property defines this for us?
 
 #### `remove` 
@@ -109,9 +113,28 @@ into three separate cases:
  in the right subtree, but it can be handled by one of the two other cases 
  (it's guaranteed to have at most one child -- why?)
  
+(**some pseudocode for this will be given in class**) *
+ 
+#### Testing
 
+In `main.cpp` write some tests exercising your newly written insertion and removal methods.
 
+* *There should be at a minimum at least four tests written for each method*
 
+These methods will be tested on several cases. Points will be deducted for tests that 
+cause your program to segfault (or otherwise blow up/do strange things).
 
+### Closing thoughts and looking ahead
 
-### closing thoughts: disadvantages, 
+The hierarchical means of storage offered by structures like binary search trees enhance 
+performance characteristics for many tasks, especially those that involve searching 
+(assuming the elements in the domain being searched adhere to a *total order*).
+
+One major disadvantage of this particular data structure is how easy it is to (inadvertantly)
+arrive at a skewed, linear tree. The data structure itself does nothing to prevent this
+particular situation -- which in the worst case discards all performance benefits of using a
+tree in the first place (searching becomes linear in the number of nodes in the tree, 
+er. list..).
+
+*The next assignment will address this problem by introducing the notion of balanced trees, 
+which vastly improve worst case searching performance*
