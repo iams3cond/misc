@@ -4,7 +4,7 @@ In lab we've already seen and implemented a simple binary search tree (BST). In 
 as well as lab we've also observed the main shortcoming of such a structure: its 
 inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown below.
 
-<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment1/figures/skewed.png" width="400">
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/skewed.png" width="800">
 
 When BSTs become skewed, we lose the log-based performance that many operations on such 
 structures normally offer. To prevent this, a class of BSTs referred 
@@ -148,7 +148,7 @@ t->dump_dot("avl_test.dot");
 ```
 here is a resulting visualization:
 
-<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment1/figures/avl_viz.png" width="400">
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/avl_viz.png" width="400">
 
 and here is the dot code we generate to tell Graphviz how to draw our tree.
 
