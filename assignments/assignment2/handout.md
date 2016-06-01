@@ -100,10 +100,10 @@ insert (T item, node current)
 
 	if (current == nullptr):
 		current = new avl_node(item, nullptr, nullptr); 
-	else if (item < current.element):
-		insert(item, current.left);
-	else if (item > current.element):
-		insert(item, current.right);
+	else if (item < current of element):
+		insert(item, current of left);
+	else if (item > current of element):
+		insert(item, current of right);
 	else 
 		throw dup_element_exception;
 	balance(current);
@@ -123,20 +123,35 @@ given below:
 |-------------|
 |It's a good idea to hold off on writing implementations for `build_dot_content` and `dump_dot` until you've read the next section.|
 
-### 3. Verification and validation: visualizing the tree (extra credit?)
+### 3. Visual verification: looking at the tree (extra credit?)
 
 To make testing the tree easier, we're going to use DOT notation to produce a nice 
 visualization of the resultant tree. To do this, we're going to utilize a graph visualization
 tool/library referred to as [graphviz](http://www.graphviz.org/).
 
-*Installation differs from platform to platform, please contact me (`dtwelch@g.clemson.edu`) 
-if you need help.*
+*Installation and usage can differ from platform to platform. That said, it's a pretty 
+popular platform so googling should turn up a number of results. Needless to say, 
+contact me (`dtwelch@g.clemson.edu`) if you need some help with the setup.*
 
-For example, here is a resulting visualization:
+For example, given the following client code:
+```c++
+avl *t = new avl();
+t->insert(4);
+t->insert(9);
+t->insert(2);
+t->insert(1);
+t->insert(0);
+t->insert(10);
+
+t->dump_contents();
+t->dump_dot("avl_test.dot");
+```
+here is a resulting visualization:
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment1/figures/avl_viz.png" width="400">
 
-and here is the dot code that produces the above visualization.
+and here is the dot code we generate to tell Graphviz how to draw our tree.
+
 ```
 digraph AVL {
 	graph [dpi=150]
@@ -146,8 +161,9 @@ digraph AVL {
     node [shape=circle fontname="Helvetica";];
     edge [arrowsize=0.8];
     
-    //below is the code that actually makes the graph, everything above this line 
-    //is boilerplate and can be hardcoded in dump_dot(..)
+    //below is the code that actually makes the graph, everything above this comment 
+    //is boilerplate and can be hardcoded in dump_dot(..), the internal method
+    //"build_dot_content()" returns a string containing the lines below (generated from the tree)
     node1 [label="4"];
     node1 -> node2;
     node2 [label="1"];
@@ -172,13 +188,13 @@ This will produce `avl_viz.png` to your current directory
 
 ## Notes, hints, etc
 
-* If you use the existing BST class you've written, but intend to follow the code 
+* If you use the existing BST class you've written in lab, but intend to follow the code 
 Weiss provides in the notes, you can safely remove the `parent` pointer from your node 
 class/struct.
 
 * You will need a way of uniquely numbering the nodes in order to write the output 
 dot file correctly. One way is to simply say:
-``` 
+```c++
 int lchild = 2 * index_lab;
 int rchild = 2 * index_lab + 1;
 ```
