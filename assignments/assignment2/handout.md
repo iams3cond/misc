@@ -11,7 +11,8 @@ inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown b
 When BSTs become skewed, we lose the clean and fast log-based performance we would normally see under 
 different configurations of the tree. To address this, a class of BSTs referred 
 to as self balancing search trees were devised to guarantee that left and right subtrees 
-remain balanced, thus allowing one to retain the desired performance characteristics.
+remain balanced over arbitrary sequences of modifications to the underlying tree, thus 
+allowing one to retain the desired performance characteristics.
 
 AVL trees are merely one specific means of addressing this problem 
 (there are numerous [others](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)). Named after 
@@ -32,8 +33,8 @@ assignment, refer to [Weiss 4.4]
 In this assignment -- either from scratch or using your existing binary search tree created 
 in [lab #7](https://github.com/dtwelch/misc/blob/master/labs/212/lab7.md) as a starting point -- 
 you'll produce a working, self-balancing AVL tree that supports insert, delete, several 
-utility methods, as well as a method for producing code to visualize the resultant trees 
-in a tool/lib called *Graphviz*.
+utility methods, as well as a method for visualizing resultant trees using a tool/lib 
+called *Graphviz*.
 
 The following is a complete list of what you're required to implement as a part of this assignment.
 
@@ -77,7 +78,7 @@ private:
 								  int index_lab) const;
 ```
 
-## Suggested steps
+## Suggested steps (in order)
 
 ### 1. `insert` + supporting methods
 
@@ -132,15 +133,15 @@ remove (T item, node current)
 	.. TODO
 ```
 
-### 3. Visual verification: looking at the tree (extra credit?)
+### 3. Visual verification (extra credit?)
 
-To make testing the tree easier, we're going to use DOT notation to produce a nice 
-visualization of the resultant tree. To do this, we're going to utilize a graph visualization
-tool/library referred to as [graphviz](http://www.graphviz.org/).
+To make testing the tree easier (and just for fun), we're going to use DOT notation to produce a nice 
+visualization of the resultant tree. To do this, we utilize a graph visualization
+tool/library referred to as [Graphviz](http://www.graphviz.org/).
 
 *Installation and usage can differ from platform to platform. That said, it's a pretty 
-popular platform so googling should turn up a number of results. Needless to say, 
-contact me (`dtwelch@g.clemson.edu`) if you need some help with the setup.*
+popular tool so googling should turn up a number of results. Needless to say, 
+contact me (`dtwelch@g.clemson.edu`) if you need some help with the setup, and I'll do what I can.*
 
 For example, given the following client code:
 ```c++
@@ -159,7 +160,7 @@ here is a resulting visualization:
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/avl_viz.png" width="400">
 
-.. and here is the dot code we generate to tell Graphviz how to draw our tree.
+.. and here is the dot code we generated to tell Graphviz how to draw the tree above:
 
 ```
 digraph AVL {
