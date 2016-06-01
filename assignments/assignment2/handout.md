@@ -1,10 +1,12 @@
 # AVL trees and the importance of being balanced
 
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/cartoon.png" width="400">
+
 In lab we've already seen and implemented a simple binary search tree (BST). In lecture
 as well as lab we've also observed the main shortcoming of such a structure: its 
 inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown below.
 
-<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/skewed.png" width="800">
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/skewed.png" width="650">
 
 When BSTs become skewed, we lose the log-based performance normally offered by tree like 
 structures. To prevent this, a class of BSTs referred 
@@ -156,7 +158,7 @@ here is a resulting visualization:
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/avl_viz.png" width="400">
 
-and here is the dot code we generate to tell Graphviz how to draw our tree.
+.. and here is the dot code we generate to tell Graphviz how to draw our tree.
 
 ```
 digraph AVL {
@@ -184,13 +186,13 @@ digraph AVL {
 }
 ```
 
-Calling `dump_dot("avl_viz.dot")` in your main driver will produce a file `avl_viz.dot` 
-to the current directory. You can transform the dot file into a picture (png) with the
-following command:
+Calling `dump_dot("avl_viz.dot")` in your main driver should write a dot file 
+(in this case, `avl_viz.dot`) to the current directory. You can tell Graphviz to transform 
+the dot file into a .png with the following command:
 ```
 > $Daniels-MacBook:src daniel$ dot avl_viz.dot | neato -n -Tpng -o avl_viz.png
 ```
-This will produce `avl_viz.png` to your current directory
+After this, you should see `avl_viz.png` in your current directory.
 
 ## Notes, hints, etc
 
