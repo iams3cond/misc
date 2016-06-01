@@ -134,7 +134,7 @@ if you need help.*
 
 For example, here is a resulting visualization:
 
-
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment1/figures/avl_viz.png" width="400">
 
 and here is the dot code that produces the above visualization.
 ```
