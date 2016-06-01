@@ -176,7 +176,15 @@ This will produce `avl_viz.png` to your current directory
 Weiss provides in the notes, you can safely remove the `parent` pointer from your node 
 class/struct.
 
-* Each node in
+* You will need a way of uniquely numbering the nodes in order to write the output 
+dot file correctly. One way is to simply say:
+``` 
+int lchild = 2 * index_lab;
+int rchild = 2 * index_lab + 1;
+```
+before you recurse, then `lchild` (or `rchild`, 
+depending on which child your recursing down into) should be passed in for `index_lab` when
+the recursive call is made.
 
 ## References
 
