@@ -11,7 +11,7 @@ structures normally offer. To prevent this, a class of BSTs referred
 to as self balancing search trees were devised to keep the left and right subtrees 
 "balanced", thus allowing one to retain the desired performance characteristics.
 
-AVL trees are **merely one** specific means of addressing this problem 
+AVL trees are merely one specific means of addressing this problem 
 (there are numerous [others]()). Named after 
 [G.M. Adel’son-Vel’skii](https://en.wikipedia.org/wiki/Georgy_Adelson-Velsky) and 
 [E.M. Landis](https://en.wikipedia.org/wiki/Evgenii_Landis) [1], these trees rely on a series 
