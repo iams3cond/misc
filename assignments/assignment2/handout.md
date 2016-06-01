@@ -1,6 +1,7 @@
 # AVL trees and the importance of being balanced
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/cartoon.jpg" width="350">
+
 In lab we've already seen and implemented a simple binary search tree (BST). In lecture
 as well as lab we've also observed the main shortcoming of such a structure: its 
 inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown below.
