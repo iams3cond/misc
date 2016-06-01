@@ -1,6 +1,6 @@
 # AVL trees and the importance of being balanced
 
-<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/cartoon.jpg" width="400">
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/cartoon.jpg" width="350">
 
 In lab we've already seen and implemented a simple binary search tree (BST). In lecture
 as well as lab we've also observed the main shortcoming of such a structure: its 
@@ -8,10 +8,10 @@ inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown b
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/skewed.png" width="650">
 
-When BSTs become skewed, we lose the log-based performance normally offered by tree like 
-structures. To prevent this, a class of BSTs referred 
-to as self balancing search trees were devised to keep the left and right subtrees 
-"balanced", thus allowing one to retain the desired performance characteristics.
+When BSTs become skewed, we lose the clean and fast log-based performance we would normally see under 
+different configurations of the tree. To address this, a class of BSTs referred 
+to as self balancing search trees were devised to guarantee that left and right subtrees 
+remain balanced, thus allowing one to retain the desired performance characteristics.
 
 AVL trees are merely one specific means of addressing this problem 
 (there are numerous [others](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)). Named after 
@@ -32,9 +32,10 @@ assignment, refer to [Weiss 4.4]
 In this assignment -- either from scratch or using your existing binary search tree created 
 in [lab #7](https://github.com/dtwelch/misc/blob/master/labs/212/lab7.md) as a starting point -- 
 you'll produce a working, self-balancing AVL tree that supports insert, delete, several 
-utility methods, as well as a method for producing code to visualize the resulting tree.
+utility methods, as well as a method for producing code to visualize the resultant trees 
+in a tool/lib called *Graphviz*.
 
-The following is a complete list of what you're required to implement.
+The following is a complete list of what you're required to implement as a part of this assignment.
 
 ```c++
 public:
