@@ -29,9 +29,8 @@ assignment, refer to [Weiss 4.4]
 
 In this assignment -- either from scratch or using your existing binary search tree created 
 in [lab #7](https://github.com/dtwelch/misc/blob/master/labs/212/lab7.md) as a starting point -- 
-you'll produce a working, self-balancing AVL tree that supports insert, 
-(delete?), several utility methods, as well as a method for producing code to visualize 
-the resulting tree.
+you'll produce a working, self-balancing AVL tree that supports insert, delete, several 
+utility methods, as well as a method for producing code to visualize the resulting tree.
 
 The following is a complete list of what you're required to implement.
 
@@ -80,10 +79,10 @@ private:
 ### 1. `insert` + supporting methods
 
 As with regular BSTs, your first priority in this assignment (aside from getting 
-barebone classes setup and compiling!) should revolve around getting the `insert` method 
+barebone classes setup and compiling) should revolve around getting the `insert` method 
 working.
 
-This will require, in turn, implementing the following:
+This will require, in turn, implementations of the following:
 
 * the four tree rotations
 * `balance`
@@ -110,11 +109,11 @@ insert (T item, node current)
 	balance(current);
 ```
 
-Thus, all the logic present in the book (left out of the psuedo-method above) should be 
-put into `balance` (complete with the `if`s and `elses`. You can however (of course) 
-stick with the insert code exactly as it appears in Weiss if you prefer.
+Thus, all the logic present in the book (left out of the pseudocode method above) should be 
+put into `balance` (complete with the `if`s and `elses`). You can however 
+stick with the `insert` code exactly as it appears in Weiss if you prefer.
 
-### 2. Implement remaining methods + `remove`
+### 2. `remove` + remaining header methods
 
 Once insert has been run several times (print the output using `in_order`) now is a good
 time to begin working on `remove` and the remaining methods. Pseudocode for `remove` is
@@ -124,20 +123,60 @@ given below:
 |-------------|
 |It's a good idea to hold off on writing implementations for `build_dot_content` and `dump_dot` until you've read the next section.|
 
-### 3. Verification and validation: visualizing the tree
+### 3. Verification and validation: visualizing the tree (extra credit?)
+
+To make testing the tree easier, we're going to use DOT notation to produce a nice 
+visualization of the resultant tree. To do this, we're going to utilize a graph visualization
+tool/library referred to as [graphviz](http://www.graphviz.org/).
+
+*Installation differs from platform to platform, please contact me (`dtwelch@g.clemson.edu`) 
+if you need help.*
+
+For example, here is a resulting visualization:
 
 
 
-To make visualization of such a tree easier, we're going to use DOT notation to produce a
-nice visualization of the trees as we construct them -- and to help us come to grips
-with the various rotations that must occur 
+and here is the dot code that produces the above visualization.
+```
+digraph AVL {
+	graph [dpi=150]
+	nodesep=0.3;
+    ranksep=0.2;
+    margin=0.1;
+    node [shape=circle fontname="Helvetica";];
+    edge [arrowsize=0.8];
+    
+    //below is the code that actually makes the graph, everything above this line 
+    //is boilerplate and can be hardcoded in dump_dot(..)
+    node1 [label="4"];
+    node1 -> node2;
+    node2 [label="1"];
+    node2 -> node4;
+    node4 [label="0"];
+    node2 -> node5;
+    node5 [label="2"];
+    node1 -> node3;
+    node3 [label="9"];
+    node3 -> node7;
+    node7 [label="10"];
+}
+```
 
+Calling `dump_dot("avl_viz.dot")` in your main driver will produce a file `avl_viz.dot` 
+to the current directory. You can transform the dot file into a picture (png) with the
+following command:
+```
+> $Daniels-MacBook:src daniel$ dot avl_viz.dot | neato -n -Tpng -o avl_viz.png
+```
+This will produce `avl_viz.png` to your current directory
 
 ## Notes, hints, etc
 
 * If you use the existing BST class you've written, but intend to follow the code 
 Weiss provides in the notes, you can safely remove the `parent` pointer from your node 
 class/struct.
+
+* Each node in
 
 ## References
 
