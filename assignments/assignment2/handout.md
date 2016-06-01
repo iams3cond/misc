@@ -6,13 +6,13 @@ inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown b
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/skewed.png" width="800">
 
-When BSTs become skewed, we lose the log-based performance that many operations on such 
-structures normally offer. To prevent this, a class of BSTs referred 
+When BSTs become skewed, we lose the log-based performance normally offered by tree like 
+structures. To prevent this, a class of BSTs referred 
 to as self balancing search trees were devised to keep the left and right subtrees 
 "balanced", thus allowing one to retain the desired performance characteristics.
 
 AVL trees are merely one specific means of addressing this problem 
-(there are numerous [others]()). Named after 
+(there are numerous [others](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)). Named after 
 [G.M. Adel’son-Vel’skii](https://en.wikipedia.org/wiki/Georgy_Adelson-Velsky) and 
 [E.M. Landis](https://en.wikipedia.org/wiki/Evgenii_Landis) [1], these trees rely on a series 
 of rotations performed on insertion of new nodes (and deletion of existing ones) to 
@@ -74,7 +74,7 @@ private:
 								  int index_lab) const;
 ```
 
-## Suggested order
+## Suggested steps
 
 ### 1. `insert` + supporting methods
 
@@ -88,12 +88,12 @@ This will require, in turn, implementations of the following:
 * `balance`
 * `height`
 
-#### A note about `balance`
+#### A note on `balance`
  
-This method is really an optional one which encapsulates all the rotations made for both 
-insertions and deletions. That is, should you choose to use this method, it should simply 
+This method is really an optional one intended to encapsulate all the rotations needed for both 
+insertions and deletions. That is, should you choose to use/implement this method, it should simply 
 be called at the very bottom of the insert and remove methods. For example, here's a 
-rough sketch of Weiss's insert method refactored using the `balance` method :
+rough sketch of Weiss's (original) insert method refactored using the `balance` method:
 
 ```python
 insert (T item, node current)
@@ -110,18 +110,24 @@ insert (T item, node current)
 ```
 
 Thus, all the logic present in the book (left out of the pseudocode method above) should be 
-put into `balance` (complete with the `if`s and `elses`). You can however 
+put into `balance` (complete with the `if`s and `else`s). You can however 
 stick with the `insert` code exactly as it appears in Weiss if you prefer.
 
 ### 2. `remove` + remaining header methods
 
-Once insert has been run several times (print the output using `in_order`) now is a good
+Once insert has been run several times (remember to print output using the `in_order` method) now is a good
 time to begin working on `remove` and the remaining methods. Pseudocode for `remove` is
 given below:
 
 |Note: skip these for now|
 |-------------|
 |It's a good idea to hold off on writing implementations for `build_dot_content` and `dump_dot` until you've read the next section.|
+
+```python
+remove (T item, node current)
+
+	.. TODO
+```
 
 ### 3. Visual verification: looking at the tree (extra credit?)
 
