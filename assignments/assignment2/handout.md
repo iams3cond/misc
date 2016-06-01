@@ -10,16 +10,16 @@ inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown b
 
 When BSTs become skewed, we lose the clean and fast log-based performance we would normally see under 
 different configurations of the tree. To address this, a class of BSTs referred 
-to as self balancing search trees were devised to guarantee that left and right subtrees 
-remain balanced over arbitrary sequences of modifications to the underlying tree, thus 
-allowing one to retain the desired performance characteristics.
+to as self balancing search trees were devised to ensure that left and right subtrees 
+remain balanced across arbitrary sequences of modifications to the underlying tree, thus 
+guaranteeing desirable performance characteristics.
 
 AVL trees are merely one specific means of addressing this problem 
 (there are numerous [others](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)). Named after 
 [G.M. Adel’son-Vel’skii](https://en.wikipedia.org/wiki/Georgy_Adelson-Velsky) and 
 [E.M. Landis](https://en.wikipedia.org/wiki/Evgenii_Landis) [1], these trees rely on a series 
 of rotations performed on insertion of new nodes (and deletion of existing ones) to 
-maintain a *tree balance property* which can be informally stated as follows:
+maintain a *tree balance property* which can be (informally) stated as follows:
 
 >the height of the left subtree of any node differs from the height of the right subtree
 >by no more than one.
@@ -36,7 +36,7 @@ you'll produce a working, self-balancing AVL tree that supports insert, delete, 
 utility methods, as well as a method for visualizing resultant trees using a tool/lib 
 called *Graphviz*.
 
-The following is a complete list of what you're required to implement as a part of this assignment.
+The following is a list of methods you will need to implement.
 
 ```c++
 public:
@@ -82,7 +82,7 @@ private:
 
 ### 1. `insert` + supporting methods
 
-As with regular BSTs, your first priority in this assignment (aside from getting 
+As with regular BSTs, your first priority (aside from getting 
 barebone classes setup and compiling) should revolve around getting the `insert` method 
 working.
 
@@ -109,7 +109,7 @@ insert (T item, node current)
 	else if (item > current of element):
 		insert(item, current of right);
 	else 
-		throw dup_element_exception;
+		#error dup element
 	balance(current);
 ```
 
