@@ -92,7 +92,7 @@ This will require, in turn, implementations of the following:
 * `balance`
 * `height`
 
-#### A note on `balance`
+#### a note on `balance`
  
 This method is really an optional one intended to encapsulate all the rotations needed for both 
 insertions and deletions. That is, should you choose to use/implement this method, it should simply 
@@ -122,7 +122,7 @@ stick with the `insert` code exactly as it appears in Weiss if you prefer.
 Once insert has been run several times (remember to print output using the `in_order` method) now is a good
 time to begin working on `remove` and the remaining methods. Here's some tentative pseudocode for `remove`.
 
-|Note: skip these for now|
+|note: skip these for now|
 |-------------|
 |It's a good idea to hold off on writing implementations for `build_dot_content` and `dump_dot` until you've read the next section.|
 
