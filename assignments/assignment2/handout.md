@@ -128,7 +128,7 @@ time to begin working on `remove` and the remaining methods. Here's some tentati
 
 ```python
 remove (T item, node current)
-	if not found: 
+	if current = null: 
 		return
 	if item < current of element:
 		remove(item, current of left)
