@@ -199,12 +199,16 @@ digraph AVL {
 }
 ```
 
-Calling `dump_dot("avl_viz.dot")` in your main driver should write a dot file 
+Calling 
+```c++
+dump_dot("avl_viz.dot")
+``` 
+in your main driver should write a dot file 
 (in this case, `avl_viz.dot`) to the current directory. You can tell Graphviz to transform 
 the dot file into a .png with the following command:
-```
+
 > $Daniels-MacBook:src daniel$ dot avl_viz.dot | neato -n -Tpng -o avl_viz.png
-```
+
 After this, you should see `avl_viz.png` in your current directory.
 
 ## Notes, hints, etc
