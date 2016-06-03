@@ -144,7 +144,7 @@ remove (T item, node current)
 	balance(current)
 ```
 
-### 3. Visual verification (extra credit?)
+### 3. Visual verification
 
 To make testing the tree easier (and just for fun), we're going to use DOT notation to produce a nice 
 visualization of the resultant tree. To do this, we utilize a graph visualization
