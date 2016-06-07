@@ -92,7 +92,7 @@ This will require, in turn, implementations of the following:
 * `balance`
 * `height`
 
-#### A note on `balance`
+#### a note on `balance`
  
 This method is really an optional one intended to encapsulate all the rotations needed for both 
 insertions and deletions. That is, should you choose to use/implement this method, it should simply 
@@ -103,14 +103,14 @@ rough sketch of Weiss's (original) insert method refactored using the `balance` 
 insert (T item, node current)
 
 	if (current == nullptr):
-		current = new avl_node(item, nullptr, nullptr); 
+		current = new avl_node(item, nullptr, nullptr)
 	else if (item < current of element):
-		insert(item, current of left);
+		insert(item, current of left)
 	else if (item > current of element):
-		insert(item, current of right);
+		insert(item, current of right)
 	else 
 		#error dup element
-	balance(current);
+	balance(current)
 ```
 
 Thus, all the logic present in the book (left out of the pseudocode method above) should be 
@@ -120,20 +120,31 @@ stick with the `insert` code exactly as it appears in Weiss if you prefer.
 ### 2. `remove` + remaining header methods
 
 Once insert has been run several times (remember to print output using the `in_order` method) now is a good
-time to begin working on `remove` and the remaining methods. Pseudocode for `remove` is
-given below:
+time to begin working on `remove` and the remaining methods. Here's some tentative pseudocode for `remove`.
 
-|Note: skip these for now|
+|note: skip these for now|
 |-------------|
 |It's a good idea to hold off on writing implementations for `build_dot_content` and `dump_dot` until you've read the next section.|
 
 ```python
 remove (T item, node current)
-
-	.. TODO
+	if current = null: 
+		return
+	if item < current of element:
+		remove(item, current of left)
+	else if item > current of element:
+		remove(item, current of right)
+	else if current has two children:
+		current of element = the minimum element in current's right subtree
+		remove(current of element, current of right)
+	else
+		avl_node old = current
+		current = current of left if not null; current of right otherwise.
+		delete old
+	balance(current)
 ```
 
-### 3. Visual verification (extra credit?)
+### 3. Visual verification
 
 To make testing the tree easier (and just for fun), we're going to use DOT notation to produce a nice 
 visualization of the resultant tree. To do this, we utilize a graph visualization
@@ -188,12 +199,16 @@ digraph AVL {
 }
 ```
 
-Calling `dump_dot("avl_viz.dot")` in your main driver should write a dot file 
+Calling 
+```c++
+dump_dot("avl_viz.dot")
+``` 
+in your main driver should write a dot file 
 (in this case, `avl_viz.dot`) to the current directory. You can tell Graphviz to transform 
 the dot file into a .png with the following command:
-```
+
 > $Daniels-MacBook:src daniel$ dot avl_viz.dot | neato -n -Tpng -o avl_viz.png
-```
+
 After this, you should see `avl_viz.png` in your current directory.
 
 ## Notes, hints, etc
