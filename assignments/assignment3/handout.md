@@ -171,8 +171,7 @@ your `toString()` method should return.
 Here, each `(i:j)` pair represents a data element `i` and its rank `j`. It's up to you whether you
 print this all on one space delimited line or with newlines (as above). For testing purposes
 however, it might be helpful to have an overloaded version of `toString` which takes a
-`bool` indicating whether or not the returned string should contain newlines. That is,
-something like:
+`bool` indicating whether or not the returned string should contain newlines. For example:
 
 ```c++
 //an overloaded toString which assumes the user wants newlines in the resulting string
@@ -189,7 +188,17 @@ std::string DisjointSets::toString(bool shouldContainNewlines) {
 * You should write the private variant of `findSet` recursively. Think carefully
 about the base case here.. What testable characteristic do all *root* nodes have?
 
-* Because we're writing a generic template class, all methods in the implementation in the 
-implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. 
-This applies to constructors, destructors, etc as well.
+* Because we're writing a generic template class, all methods in the implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. This applies to constructors, destructors, etc as well.
+
+## Phase 2: implement an directed acyclic graph (dag) class 
+
+Given the following header for a weighted directed acyclic graph (wdag), write an *adjancency list* based representation.
+
+```c++
+class DirectedAcyclicGraph 
+{
+public:
+	... todo
+};
+```
 
