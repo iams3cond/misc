@@ -6,7 +6,7 @@ number of additional, generic classes to aid in the implementation of Kruskal's
 well known greedy algorithm for constructing minimal spanning trees (MSTs) -- which will ultimately
 be implemented on top of the graph class you write.
 
-This assignment is divided into three phases.
+This assignment is divided into two (three?) phases.
 
 ## Phase 1: implement a `DisjointSet` forest
 
@@ -110,7 +110,7 @@ otherwise y becomes the parent of x
 ### Testing
 
 As usual, write unit tests (i.e. ones beyond the example below) for your implementation.
-By `#include`(ing) `<cassert>` you can place asserts throughout your test program:
+By `#include`(ing) `<cassert>` you can place asserts throughout your test program.
 
 For example, one of your test methods might look like the following:
 
@@ -140,9 +140,23 @@ public void test_union1 {
 	assert(forest.toString() == "0:0->4:2  1:1->4:2  2:0  3:1  4:2  5:0  6:0->1:1->4:2  7:0->3:1  ");	
 }
 ```
-Here's a visualization of the forest after the above call sequence:
+And of course, don't forget to actually call your test methods from your `main()`.
+Here's a visualization of the forest after the above call sequence, followed by the output
+your `toString()` method should return the following string.
 
-<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment3/figures/disj_sets.png" width="650">
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment3/figures/disj_sets.png" width="300">
+
+```
+0:0->4:2
+1:1->4:2
+2:0
+3:1
+4:2
+5:0
+6:0->1:1->4:2  
+7:0->3:1
+```
+Here each (i:j) pair, represents a data element i and its rank j.
 
 ### Notes:
 
