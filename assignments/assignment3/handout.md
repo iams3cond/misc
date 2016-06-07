@@ -6,7 +6,7 @@ number of additional, generic classes to aid in the implementation of Kruskal's
 well known greedy algorithm for constructing minimal spanning trees (MSTs) -- which will ultimately
 be implemented on top of the graph class you write.
 
-This assignment is divided into two (three?) phases.
+This assignment is broken down into two (three?) phases.
 
 ## Phase 1: implement a `DisjointSet` forest
 
@@ -18,6 +18,8 @@ The template header below, which you will provide an implementation of, should
 incorporate *union-by-rank* and *path-compression* optimizations.
 
 ```c++
+//disjoint_sets.h
+
 template <class T>
 class DSNode
 {
@@ -53,11 +55,21 @@ class DisjointSets
 		DSNode<T>* findSet(DSNode<T> *x);	
 		void link(DSNode<T> *x, DSNode<T> *y);
 };
-#include "DisjointSets.cpp"
+#include "disjoint_sets.cpp"
 ```
 
 For simplicity, include both `DSNode` and `DisjointSets` in the same `.h` file as it is
-listed. 
+listed. Also, make note of `#include "disjoint_sets.cpp"` in the header.. For (generic) 
+template classes in c++, this is the standard way of keeping headers separate from 
+implementations. This means **when you go to compile, you should do this:**
+
+```
+g++ -Wall -std=c++11 some_main.cpp disjoint_sets.h
+```
+
+Because the header in this case pulls in the .cpp this is the correct command (you'll 
+get errors if you try it the traditional way). Also realize this only applies to headers
+that contain generic templates (e.g. `template <class T>`, etc)
 
 To get you started, the proceeding section provides some rough pseudocode for some of the 
 public and private methods you'll be writing.
@@ -156,8 +168,22 @@ your `toString()` method should return the following string.
 6:0->1:1->4:2  
 7:0->3:1
 ```
-Here each (i:j) pair, represents a data element i and its rank j.
+Here, each `(i:j)` pair represents a data element `i` and its rank `j`. It's up to you whether you
+print this all on one space delimited line or with newlines (as above). For testing purposes
+however, it might be helpful to have an overloaded version of `toString` which takes a
+`bool` indicating whether or not the returned string should contain newlines. That is,
+something like:
 
+```c++
+//an overloaded toString which assumes the user wants newlines in the resulting string
+std::string DisjointSets::toString() {
+	return toString(true);
+}
+
+std::string DisjointSets::toString(bool shouldContainNewlines) {
+	...
+}
+```
 ### Notes:
 
 * You should write the private variant of `findSet` recursively. Think carefully
@@ -167,8 +193,3 @@ about the base case here.. What testable characteristic do all *root* nodes have
 implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. 
 This applies to constructors, destructors, etc as well.
 
-
-
-
-make a note about implementing template methods and compiling 
-(.h includes the cpp, so compile .hs that contain template classes), other classes as normal.
