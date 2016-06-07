@@ -132,9 +132,9 @@ remove (T item, node current)
 		return
 	if item < current of element:
 		remove(item, current of left)
-	if item > current of element:
+	else if item > current of element:
 		remove(item, current of right)
-	if current has two children:
+	else if current has two children:
 		current of element = the minimum element in current's right subtree
 		remove(current of element, current of right)
 	else
