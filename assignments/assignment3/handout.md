@@ -59,70 +59,95 @@ class DisjointSets
 For simplicity, include both `DSNode` and `DisjointSets` in the same `.h` file as it is
 listed. 
 
-To get you started, here is some rough pseudocode for the public and private methods 
-you'll be writing.
+To get you started, the proceeding section provides some rough pseudocode for some of the 
+public and private methods you'll be writing.
 
-## Public 
+### Public 
 
-### `makeUnion`
+#### `makeUnion (T x, T y)`
 
 ```python
 #union the disjoint sets containing x and y.
-def makeUnion(T x, T y):
-	n1 = find node containing x 
-	n2 = find node containing y
-	link(representative element of n1, representative element of n2)
+n1 = find node containing x 
+n2 = find node containing y
+link(representative element of n1, representative element of n2)
 ```
 
-### `makeSet`
+#### `makeSet (T x)`
 
 ```python
 #make a new singleton set containing data x
-def makeSet(T x):
-	if length == capacity then stop, error
-	create a new node n containing x
-	n of parent = n							#all nodes start life pointing to themselves
-	n of rank = 0							#singletons start rank 0
-	increment length						
-}
+if length == capacity then stop, error
+create a new node n containing x
+n of parent = n							#all nodes start life pointing to themselves
+n of rank = 0							#singletons start rank 0
+increment length						
 ```
 
-### `findSet`
+#### `findSet (T x)`
 
 ```python
 #finds and returns the representative of the set containing x
-def findSet(T x):
-	find the node containing x
-	find the representative of this node
-	return the representative node's data
+find the node containing x
+find the representative of this node
+return the representative node's data
 ```
 
-## Private
+### Private
 
-Here's some (pretty) rough pseudocode for link that carries out union by rank.
-### `link`
+And here's some (pretty) rough pseudocode for the `link` method that does union by rank.
+
+#### `link(node x, node y)`
 
 ```python
 #links two disjoint sets together
-def link(node x, node y):
-	if the rank of x is greater than the rank of y then 
-		x becomes the parent of y
-	otherwise y becomes the parent of x
-		and additionally, if y's rank == x's rank then increment y's rank
+if the rank of x is greater than the rank of y then 
+	x becomes the parent of y
+otherwise y becomes the parent of x
+	and additionally, if y's rank == x's rank then increment y's rank
 ```
 
 ### Testing
 
-As you are implementing the methods above (and afterwards)
+As usual, write unit tests (i.e. ones beyond the example below) for your implementation.
+By `#include`(ing) `<cassert>` you can place asserts throughout your test program:
+
+For example, one of your test methods might look like the following:
 
 ```c++
+public void test_union1 {
+	//first create a bunch of singleton sets
+	forest.makeSet(aa);
+	forest.makeSet(bb);
+	forest.makeSet(cc);
+	forest.makeSet(dd);
+	forest.makeSet(ee);
+	forest.makeSet(ff);
+	forest.makeSet(gg);
+	forest.makeSet(hh);
 
+	//now link-em together
+	forest.makeUnion(gg, bb);
+	assert(forest.toString() == "0:0  1:1  2:0  3:0  4:0  5:0  6:0->1:1  7:0  ");
+
+	forest.makeUnion(aa, ee);
+	assert(forest.toString() == "0:0->4:1  1:1  2:0  3:0  4:1  5:0  6:0->1:1  7:0  ");
+
+	forest.makeUnion(gg, ee);
+	assert(forest.toString() == "0:0->4:2  1:1->4:2  2:0  3:0  4:2  5:0  6:0->1:1->4:2  7:0  ");
+
+	forest.makeUnion(hh, dd);
+	assert(forest.toString() == "0:0->4:2  1:1->4:2  2:0  3:1  4:2  5:0  6:0->1:1->4:2  7:0->3:1  ");	
+}
 ```
+Here's a visualization of the forest after the above call sequence:
+
+<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment3/figures/disj_sets.png" width="650">
 
 ### Notes:
 
-* You should write the private version of method `findSet` recursively. Think carefully
-about the base case here.. What testable characteristic do all root nodes have?
+* You should write the private variant of `findSet` recursively. Think carefully
+about the base case here.. What testable characteristic do all *root* nodes have?
 
 * Because we're writing a generic template class, all methods in the implementation in the 
 implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. 
