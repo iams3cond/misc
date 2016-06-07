@@ -154,7 +154,7 @@ public void test_union1 {
 ```
 And of course, don't forget to actually call your test methods from your `main()`.
 Here's a visualization of the forest after the above call sequence, followed by the output
-your `toString()` method should return the following string.
+your `toString()` method should return.
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment3/figures/disj_sets.png" width="300">
 
