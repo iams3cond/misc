@@ -258,4 +258,6 @@ void testKruskal1() {
 
 ## Phase 4: implement a minimum priority queue using a heap (extra credit)
 
-Instead of using the std template library's queue, write your own.
+Instead of using the std template library's queue, write your own. You have some flexibility in determining how you want to go about this with the understanding that you are not to simply copy someone else's implementation (or translate) a bloggers implementation in another language. I suggest implementing psuedocode provided in a canonical algorithms textbook such Cormen Leiserson Rivest and Stein (clrs), or other popular textbooks.
+
+**I suggest completing the core assignment as written above. That is, get the project done, *then* come back and do this if you feel up to it.**
