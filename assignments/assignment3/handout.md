@@ -236,7 +236,7 @@ In this case, because we're just writing a bunch of static methods, this class s
 
 ### Testing
 
-Finally, have a main driver in a separate .cpp that calls these static methods on some sample graphs. As usual write some tests for these methods. It might be somewhat difficult writing tests for kruskal's algorithm as its behavior is relational (meaning their maybe multiple valid minimum spanning trees in a given graph). So for testing purposes, it's probably a good idea to find graphs where you manually enumerate all answers and test the output against those answers.
+Finally, have a main driver in a separate .cpp that calls these static methods on some sample graphs. As usual write some tests for these methods. It might be somewhat difficult writing tests for kruskal's algorithm as its behavior is relational (meaning there might be multiple valid minimum spanning trees in a given graph). So for testing purposes, it's probably a good idea to find graphs where you manually enumerate all answers and test the output against those answers.
 
 ```c++
 int main() {
