@@ -223,14 +223,37 @@ Now that we have a graph class and disjoint set at our disposal, create a separa
 ```c++
 static std::vector<Edge*> kruskalFindMST(const UndirectedWeightedGraph *g) { .. }
 ```
-This method should use Kruskal's algorithm to construct a minimum spanning tree from a weighted, undirected graph `g`. It should return the list of edges forming a MST in `g`. You will need to use your disjoint set class here, in addition to a priority queue for sorting the edges by weight. Take your time implementing this. There are a number of details that tend to get hidden under some very simple looking pseudocode.
+This method should use Kruskal's algorithm to construct a minimum spanning tree from a weighted, undirected graph `g`. It should return the list of edges forming a MST in `g`. You will need to use your disjoint set class here, in addition to a priority queue for sorting the edges by weight (I suggest using `std::priority_queue` for expediency, though if your looking for an extra challenge, consult the optional phase 4). Take your time implementing this. There are a number of details that tend to get hidden under some very simple looking pseudocode.
 
 ```c++
 static void dfs(const UndirectedWeightedGraph *g) { .. }
-```
-This method should print
-
 static void bfs(const UndirectedWeightedGraph *g) { .. }
+```
 
+These two methods should implement depth (and breadth) first search. Print the vertices in the order they are visited.
 
-This class will have no constructor, just a collection of static methods for variety of graph algorithms. 
+In this case, because we're just writing a bunch of static methods, this class should have no constructor; so feel free to implement all of these methods inline in the `.h` file for the `GraphAlgorithms` class.
+
+### Testing
+
+Finally, have a main driver in a separate .cpp that calls these static methods on some sample graphs. As usual write some tests for these methods. It might be somewhat difficult writing tests for kruskal's algorithm as its behavior is relational (meaning their maybe multiple valid minimum spanning trees in a given graph). So for testing purposes, it's probably a good idea to find graphs where you manually enumerate all answers and test the output against those answers.
+
+```c++
+int main() {
+	testDfs1();
+	testDfs2();
+	testDfs3();
+	testKruskal1();
+	testKruskal2();
+	testKruskal3();
+	..
+}
+
+void testKruskal1() {
+	UndirectedWeightedGraph *g = new UndirectedWeightedGraph(4);
+	//... add edges
+	GraphAlgorithms::kruskalFindMST(g);
+}
+```
+
+## Phase 4: 
