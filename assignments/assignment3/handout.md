@@ -6,7 +6,7 @@ number of additional, generic classes to aid in the implementation of Kruskal's
 well known greedy algorithm for constructing minimal spanning trees (MSTs) -- which will ultimately
 be implemented on top of the graph class you write.
 
-This assignment is broken down into two (three?) phases.
+This assignment is broken down into three phases.   //TODO TODO: four phases -- one of which is optional (for extra credit).
 
 ## Phase 1: implement a `DisjointSet` forest
 
@@ -190,15 +190,32 @@ about the base case here.. What testable characteristic do all *root* nodes have
 
 * Because we're writing a generic template class, all methods in the implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. This applies to constructors, destructors, etc as well.
 
-## Phase 2: implement an directed acyclic graph (dag) class 
+## Phase 2: implementing a graph
 
-Given the following header for a weighted directed acyclic graph (wdag), write an *adjancency list* based representation.
+### class `Edge`
+First construct a weighted `Edge` class which stores two ints representing the ends of an edge, along with a weight, `w`. Your `Edge` class should also support the `<<` operator and overload (at a minimum) the `<=` and `>=` relational operators. 
 
-```c++
-class DirectedAcyclicGraph 
-{
-public:
-	... todo
-};
-```
+### class `UndirectedWeightedGraph`
+The graph itself should be represented as an adjacency list. The constructor should take an int representing the number of nodes in the graph. 
 
+There should be methods for adding and removing edges; and their parameters should just be ints describing the ends of the edge your adding (or removing). Note that the add method should also take a weight for the edge being added.
+
+There should also be a method `edges()` that returns all `Edge`s currently in the graph, as well as a method `adjacentTo(..)` that takes a vertex (int) and returns all `Edge`s adjacent to it. 
+
+There should be methods for retrieving the number of vertices in the graph as well as the number of edges.
+
+Finally, overload the output stream (`<<`) operator as well. Use your best judgement for determining the way the output should look. I suggest a scheme like the following:
+
+>[node #] : [node #'s adjacency list]
+
+where each portion in square brackets would be replaced by real info.
+
+#### Notes:
+
+* It's up to you to figure out how you want to internally organize all of this. In terms of the 'adjacency list' representation itself, you can always use an array where each index *i* (representing the name of a given node) holds a container for storing the edges adjacent to it. Though I think its preferable to simply use a vector of vectors. Less hassle.
+* Assume the int labels on all nodes are unique.
+* Since we're using ints within some range from `0..vertices`, *make sure you check that the indices passed into the various methods of this class are in range. It's probably best to have a helper method that does so.*
+
+## Phase 3: graph algorithms
+
+Now that we have a graph class and disjoint set at our disposal, we can start 
