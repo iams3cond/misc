@@ -2,11 +2,11 @@
 
 In this assignment you will write code to represent the mathematical notion of a 
 directed acyclic graph (DAG) discussed in lecture. Along the way, you will construct a 
-number of additional, generic classes to aid in the implementation of Kruskal's
+number of additional classes to aid in the implementation of Kruskal's
 well known greedy algorithm for constructing minimal spanning trees (MSTs) -- which will ultimately
 be implemented on top of the graph class you write.
 
-This assignment is broken down into three phases.   //TODO TODO: four phases -- one of which is optional (for extra credit).
+This assignment is broken down into three phases, plus an optional fourth phase.
 
 ## Phase 1: implement a `DisjointSet` forest
 
@@ -59,7 +59,7 @@ class DisjointSets
 ```
 
 For simplicity, include both `DSNode` and `DisjointSets` in the same `.h` file as it is
-listed. Also, make note of `#include "disjoint_sets.cpp"` in the header.. For (generic) 
+listed. Also take note of the inclusion of `"disjoint_sets.cpp"` in the header. For (generic) 
 template classes in c++, this is the standard way of keeping headers separate from 
 implementations. This means **when you go to compile, you should do this:**
 
@@ -67,12 +67,10 @@ implementations. This means **when you go to compile, you should do this:**
 g++ -Wall -std=c++11 some_main.cpp disjoint_sets.h
 ```
 
-Because the header in this case pulls in the .cpp this is the correct command (you'll 
-get errors if you try it the traditional way). Also realize this only applies to headers
-that contain generic templates (e.g. `template <class T>`, etc)
+In this case, the disjoint sets header automatically pulls in the .cpp -- which effectively places both the header and implementation in the same file (c++ [requires](http://stackoverflow.com/questions/1724036/splitting-templated-c-classes-into-hpp-cpp-files-is-it-possible) this of template classes).
 
-To get you started, the proceeding section provides some rough pseudocode for some of the 
-public and private methods you'll be writing.
+To get you started, the proceeding section provides some rough pseudocode of the 
+public and private methods you'll be writing in this phase.
 
 ### Public 
 
@@ -185,8 +183,8 @@ std::string DisjointSets::toString(bool shouldContainNewlines) {
 ```
 ### Notes:
 
-* You should write the private variant of `findSet` recursively. Think carefully
-about the base case here.. What testable characteristic do all *root* nodes have?
+* Should you choose to write the private variant of `findSet` recursively. Think carefully
+about the base case. What testable characteristic do all *root* nodes have?
 
 * Because we're writing a generic template class, all methods in the implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. This applies to constructors, destructors, etc as well.
 
@@ -196,11 +194,11 @@ about the base case here.. What testable characteristic do all *root* nodes have
 First construct a weighted `Edge` class which stores two ints representing the ends of an edge, along with a weight, `w`. Your `Edge` class should also support the `<<` operator and overload (at a minimum) the `<=` and `>=` relational operators. 
 
 ### class `UndirectedWeightedGraph`
-The graph itself should be represented as an adjacency list. The constructor should take an int representing the number of nodes in the graph. There should be methods for adding and removing edges; and their parameters should just be ints describing the ends of the edge your adding (or removing). Note that the add method should also take a weight for the edge being added.
+The graph itself should be represented as an adjacency list. The constructor should take an int representing the number of nodes in the graph. There should be methods for adding and removing edges, and their parameters should just be ints describing the ends of the edge your adding (or removing). Note that the add method should also take a weight for the edge being added.
 
-There should also be a method `edges()` that returns all `Edge`s currently in the graph, as well as a method `adjacentTo(..)` that takes a vertex (int) and returns all `Edge`s adjacent to it; also include methods for retrieving the number of edges and vertices currently in the graph.
+There should also be a method `edges()` that returns all `Edge`s currently in the graph, as well as a method `adjacentTo(..)` that takes a vertex (int) and returns all incident `Edge`s -- naturally, there should also be methods for retrieving the number of edges and vertices currently in the graph.
 
-Finally, overload the output stream (`<<`) operator as well. Use your best judgement for determining the way the output should look. I suggest a scheme like the following:
+Finally, overload the output stream (`<<`) operator. Use your best judgement when determining the way the output should look. I suggest a scheme like the following:
 
 >[node #] : [node #'s adjacency list]
 
@@ -212,7 +210,7 @@ Remember to use `assert`s to write some basic unit tests for your graph class to
 
 ### Notes:
 
-* It's up to you to figure out how you want to internally organize all of this. In terms of the 'adjacency list' representation itself, you can always use an array where each index *i* (representing the name of a given node) holds a container for storing the edges adjacent to it. Though I think its preferable to simply use a vector of vectors. Less hassle.
+* It's up to you to figure out how you want to internally organize all of this. In terms of the 'adjacency list' representation, you can always use an array where each index *i* (representing the name of a given node) holds a container for storing the edges adjacent to it. Though I think its preferable to simply use a vector of vectors. Less hassle.
 * Assume the int labels on all nodes are unique.
 * Since we're using ints within some range from `0..vertices`, *make sure you check that the indices passed into the various methods of this class are in range. It's probably best to have a helper method that does so.*
 
@@ -232,7 +230,7 @@ static void bfs(const UndirectedWeightedGraph *g) { .. }
 
 These two methods should implement depth (and breadth) first search. Print the vertices in the order they are visited.
 
-In this case, because we're just writing a bunch of static methods, this class should have no constructor; so feel free to implement all of these methods inline in the `.h` file for the `GraphAlgorithms` class.
+In this case, because we're just writing a bunch of static methods, this class should have no constructor; that is you are encouraged to implement all of these methods inline in the `.h` file for the `GraphAlgorithms` class.
 
 ### Testing
 
