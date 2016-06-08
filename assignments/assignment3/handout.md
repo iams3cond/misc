@@ -196,13 +196,9 @@ about the base case here.. What testable characteristic do all *root* nodes have
 First construct a weighted `Edge` class which stores two ints representing the ends of an edge, along with a weight, `w`. Your `Edge` class should also support the `<<` operator and overload (at a minimum) the `<=` and `>=` relational operators. 
 
 ### class `UndirectedWeightedGraph`
-The graph itself should be represented as an adjacency list. The constructor should take an int representing the number of nodes in the graph. 
+The graph itself should be represented as an adjacency list. The constructor should take an int representing the number of nodes in the graph. There should be methods for adding and removing edges; and their parameters should just be ints describing the ends of the edge your adding (or removing). Note that the add method should also take a weight for the edge being added.
 
-There should be methods for adding and removing edges; and their parameters should just be ints describing the ends of the edge your adding (or removing). Note that the add method should also take a weight for the edge being added.
-
-There should also be a method `edges()` that returns all `Edge`s currently in the graph, as well as a method `adjacentTo(..)` that takes a vertex (int) and returns all `Edge`s adjacent to it. 
-
-There should be methods for retrieving the number of vertices in the graph as well as the number of edges.
+There should also be a method `edges()` that returns all `Edge`s currently in the graph, as well as a method `adjacentTo(..)` that takes a vertex (int) and returns all `Edge`s adjacent to it; also include methods for retrieving the number of edges and vertices currently in the graph.
 
 Finally, overload the output stream (`<<`) operator as well. Use your best judgement for determining the way the output should look. I suggest a scheme like the following:
 
@@ -218,4 +214,19 @@ where each portion in square brackets would be replaced by real info.
 
 ## Phase 3: graph algorithms
 
-Now that we have a graph class and disjoint set at our disposal, we can start 
+Now that we have a graph class and disjoint set at our disposal, create a separate class called `GraphAlgorithms` that includes the following methods.
+
+```c++
+static std::vector<Edge*> kruskalFindMST(const UndirectedWeightedGraph *g) { .. }
+```
+This method should use Kruskal's algorithm to construct a minimum spanning tree from a weighted, undirected graph `g`. It should return the list of edges forming a MST in `g`. You will need to use your disjoint set class here, in addition to a priority queue for sorting the edges by weight. Take your time implementing this. There are a number of details that tend to get hidden under some very simple looking pseudocode.
+
+```c++
+static void dfs(const UndirectedWeightedGraph *g) { .. }
+```
+This method should print
+
+static void bfs(const UndirectedWeightedGraph *g) { .. }
+
+
+This class will have no constructor, just a collection of static methods for variety of graph algorithms. 
