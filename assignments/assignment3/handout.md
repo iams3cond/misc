@@ -206,7 +206,11 @@ Finally, overload the output stream (`<<`) operator as well. Use your best judge
 
 where each portion in square brackets would be replaced by real info.
 
-#### Notes:
+### Testing:
+
+Remember to use `assert`s to write some basic unit tests for your graph class to ensure it's working properly.
+
+### Notes:
 
 * It's up to you to figure out how you want to internally organize all of this. In terms of the 'adjacency list' representation itself, you can always use an array where each index *i* (representing the name of a given node) holds a container for storing the edges adjacent to it. Though I think its preferable to simply use a vector of vectors. Less hassle.
 * Assume the int labels on all nodes are unique.
