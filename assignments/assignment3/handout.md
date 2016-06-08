@@ -256,4 +256,6 @@ void testKruskal1() {
 }
 ```
 
-## Phase 4: 
+## Phase 4: implement a minimum priority queue using a heap (extra credit)
+
+Instead of using the std template library's queue, write your own.
