@@ -57,6 +57,7 @@ public:
     
 private:	
 	void insert(const T item, avl_node *&current);
+	void remove(const T item, avl_node *&current) {
 
 	void rotate_with_left_child(avl_node *&k2);
 	void rotate_with_right_child(avl_node *&k1);
@@ -66,6 +67,7 @@ private:
 	void in_order(avl_node *e) const;
 	avl_node* find_min(avl_node *e) const;
 	avl_node* find_max(avl_node *e) const;
+
 
 	void balance(avl_node *&e);
 	void delete_tree(avl_node *&e);			//deletes all nodes in (sub)tree e
