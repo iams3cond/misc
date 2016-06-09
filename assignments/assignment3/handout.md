@@ -26,8 +26,8 @@ class DSNode
 public:
 	T* data;
 	int rank;					
-	DNode<T> *parent;
-	DNode(T* e) : data(e), rank(0), parent(nullptr) 
+	DSNode<T> *parent;
+	DSNode(T* e) : data(e), rank(0), parent(nullptr) 
 	{}										
 };
 
