@@ -46,7 +46,7 @@ class DisjointSets
 		void makeUnion(T* x, T* y);		//union the disjoint sets containing data x and y
 		T* findSet(T* x);				//return the representative of the set containing x
 		
-		std::string display();		
+		std::string toString();		
 	private:
 		//finds and returns a node containing element x; null if not found.
 		DSNode<T>* find(T* x); 
