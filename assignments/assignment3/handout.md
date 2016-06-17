@@ -199,7 +199,7 @@ std::string DisjointSets::toString(bool shouldContainNewlines) {
 ### Notes:
 
 * Should you choose to write the private variant of `findSet` recursively. Think carefully
-about the base case. What testable characteristic do all *root* nodes have?
+about the base case. What testable characteristic do all *root* nodes have? (**update: see pseudocode above for findSet(..)**)
 
 * Because we're writing a generic template class, all methods in the implementation must begin with the line: `template <class T> /* normal method declaration goes here */`. This applies to constructors, destructors, etc as well.
 
