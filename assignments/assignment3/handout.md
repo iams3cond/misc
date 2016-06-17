@@ -126,6 +126,13 @@ For example, one of your test methods might look like the following:
 
 ```c++
 public void test_union1 {
+	DisjointSets<int> forest(10);
+	int a = 0;  int b = 1;  int c = 2;  int d = 3;  int e = 4;
+	int f = 5;  int g = 6;  int h = 7;
+	
+	int *aa = &a;  int *bb = &b;  int *cc = &c;  int *dd = &d;  int *ee = &e;
+	int *ff = &f;  int *gg = &g;  int *hh = &h;
+	
 	//first create a bunch of singleton sets
 	forest.makeSet(aa);
 	forest.makeSet(bb);
