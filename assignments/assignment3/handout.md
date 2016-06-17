@@ -105,7 +105,7 @@ return the representative node's data
 
 ### Private
 
-And here's some (pretty) rough pseudocode for the `link` method that does union by rank.
+And here's some (pretty) rough pseudocode for the `link` method and the `findSet` method which is what carries out path compression.
 
 #### `link(node x, node y)`
 
@@ -115,6 +115,14 @@ if the rank of x is greater than the rank of y then
 	x becomes the parent of y
 otherwise y becomes the parent of x
 	and additionally, if y's rank == x's rank then increment y's rank
+```
+
+#### `findSet(node x)`
+
+```python
+if x is not equal to x of parent:
+	x of parent = findSet(x of parent)
+return x of parent;
 ```
 
 ### Testing
