@@ -17,28 +17,42 @@ You should download the latest version of the Java Development Kit (JDK) from [h
 
 |A note on the ulimate edition|
 |-------------|
-|*If your a student, I believe it's possible to obtain a year long license to the ultimate edition for free, though need to provide your clemson email address (as proof I suppose). You'll have to do some digging on the Jetbrains website to find out how to initiate this. Needless to say, you won't need the ulimate edition for anything in this course, so it's probably best (re: faster/easier) to stick with the community edition -- which for all intents and purposes is exactly the same IDE minus support for several framework web development frameworks (play, grail, react js, etc)*|
+|*If your a student, I believe it's possible to obtain a year long license to the ultimate edition for free, though if I recall correctly you'll need to provide your Clemson email address (as proof I suppose). You'll have to do some digging on the Jetbrains website to find out how to initiate this. Needless to say, you won't need the ulimate edition for anything in this course, so it's probably best (re: faster/easier) to stick with the community edition -- which for all intents and purposes is exactly the same core IDE minus support for several web development frameworks (play, grail, react js, etc).*|
 
 First install the JDK downloaded from Oracle's website. Once this is done, installation of IntelliJ should simply be a matter of clicking the .exe, .dmg, etc and following the default prompts (Note: If you're runnning Linux *I think* you need to run the shell script `idea.sh` located in the tarball or whatever package you downloaded to get the installation rolling, though I could be wrong -- so consult Google for more help with that).
 
 ## 2. Creating a simple `Hello World` project
 
-1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." and click "ok".
+1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." then click "ok".
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.png" width="500">
 
 2. Next, you should be greeted by the following welcome page. Simply select "Create New Project".
  <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/startup_screen.png" width="500">
 
-3. The next screen you see should look something like this (although you the "Project SDK" will likely be empty in yours -- so ignore that for the moment).
+3. The next screen you see should look something like this (although the 'Project SDK' box will likely be empty in yours -- so ignore that for the moment).
  <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup_page.png" width="500">
 
-4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the "new" button and select "JDK" from the popup list. 
+4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the 'new' button and select 'JDK' from the popup list. **You'll likely only need to do this once per machine, IDEA will remember any SDK's you've pointed it to for any future projects**.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup1.png" width="500">
 
-5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK JDK in section 1 (simply clicked next at each step) this box should already have detected and selected the right folder from the tree. So all you have to do is click "Ok". 
-<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup2.png" width="500">
+5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK JDK in section 1 (simply clicked next at each step) this box should already have detected and automatically selected the right folder from the tree. So all you should have to do is click "Ok". Once closed, click "Next"
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup2.png" width="400">
 
-6. 
+6. Keep clicking "Next" until you get the following page
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project.png" width="500">
+
+7. Give your project a name, preferably something clever like "hello" (because we're writing a hello world program). Once finished, click 'Finish'.
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project2.png" width="500">
+
+8. Once loaded, the you'll have a new, empty project -- and you're ready to start writing.
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/empty_project.png" width="600">
+
+9. The first two primary things to know is how to create a new classes/files and run your code. First, expand the `Hello` folder, revealing a blue `src` folder: this is where all of our code (and, optionally, packages) will be placed.
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class.png" width="300">
+
+10. Next, right click on the blue `src` folder and select `new > Java Class`
+11. <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class2.png" width="500">
+
 
 
 
