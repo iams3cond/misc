@@ -63,7 +63,7 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 
 Programs can be run in all Jetbrain IDEs through *run configurations*. We'll create a simple run configuration for our hello world program and will briefly demonstrate how run configurations can be used to simulate arguments passed through the command line.
 
-1. First edit configurations
+1. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code.png" width="600">
 
 2. Next, click the plus icon and 'Application'.
