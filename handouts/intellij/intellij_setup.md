@@ -1,18 +1,19 @@
-# Java Development with IntelliJ Idea: A quick usage guide
+# Java Development with IntelliJ IDEA: A quick usage guide
 
-<img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/cartoon.jpg" width="400">
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/jetbrains_logo_detail.jpg" width="400">
 
-In lab we've already seen and implemented a simple binary search tree (BST). In lecture
-as well as lab we've also observed the main shortcoming of such a structure: its 
-inability to prevent arbitrarily skewed (lop-sided) trees, such as those shown below.
+IntelliJ IDEA is a powerful IDE built by a company called [Jetbrains](https://www.jetbrains.com/) for developing and maintaining Java projects of all sizes. While it is comparable to Eclipse, this document avoids getting into a lengthy discussion on the merits of each; for that, consult one or more of the many 'articles' (blogs) online such as [this](https://dzone.com/articles/why-idea-better-eclipse), [this](https://www.quora.com/What-is-best-IDE-IntelliJ-IDEA-vs-Eclipse-for-Java-development), or finally [this](https://blog.jetbrains.com/idea/2016/03/enjoying-java-and-being-more-productive-with-intellij-idea/). 
+
+Consequently, this document is by no means intended to be a complete (or even partial) guide to using this IDE -- in fact it doesn't even scratch the surface. To really take advantage of the features offered, you'll likely need to search online for more detailed instructions on how to carry out certain IDE operations (such as refactor-renaming, finding all implementations of a given interface, etc). 
+
+This guide is therefore really only intended to help get the IDE downloaded, installed, and setup for a simple "Hello World" project. The pictures in this guide written for Intellij IDEA 
+
+## Required downloads
+
+Before you can use the IDE you'll need both a recent version of the Java Development Kit (JDK) as well as the (free) community edition of the IDE itself, available [here](
 
 <img src="https://github.com/dtwelch/misc/blob/master/assignments/assignment2/figures/skewed.png" width="650">
 
-When BSTs become skewed, we lose the clean and fast log-based performance we would normally see under 
-different configurations of the tree. To address this, a class of BSTs referred 
-to as self balancing search trees were devised to ensure that left and right subtrees 
-remain balanced across arbitrary sequences of modifications to the underlying tree, thus 
-guaranteeing desirable performance characteristics.
 
 AVL trees are merely one specific means of addressing this problem 
 (there are numerous [others](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)). Named after 
