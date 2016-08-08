@@ -35,19 +35,19 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the 'new' button and select 'JDK' from the popup list. **You'll likely only need to do this once per machine, IDEA will remember any SDK's you've pointed it to for any future projects**.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup1.png" width="500">
 
-5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK JDK in section 1 (simply clicked next at each step) this box should already have detected and automatically selected the right folder from the tree. So all you should have to do is click "Ok". Once closed, click "Next"
+5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK JDK in section 1 (simply clicked next at each step) this box should already have detected and automatically selected the right folder from the tree. So click "Ok". Once closed, click "Next"
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup2.png" width="400">
 
 6. Keep clicking "Next" until you get the following page
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project.png" width="500">
 
-7. Give your project a name, preferably something clever like "hello" (because we're writing a hello world program). Once finished, click 'Finish'.
+7. Give your project a name, preferably something clever like "hello" (because we're writing a hello world program). Once finished, click 'Finish'. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project2.png" width="500">
 
 8. Once loaded, the you'll have a new, empty project -- and you're ready to start writing.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/empty_project.png" width="600">
 
-9. The first two primary things to know is how to create a new classes/files and run your code. First, expand the `Hello` folder, revealing a blue `src` folder: this is where all of our code (and, optionally, packages) will be placed.
+9. Now we'll create a class containing a `main` function that prints `hello world`, then run it. First, expand the `Hello` folder, revealing a blue `src` folder: this is where all of our code (and, optionally, packages) will be placed.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class.png" width="300">
 
 10. Next, right click on the blue `src` folder and select `new > Java Class`
