@@ -23,10 +23,10 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 
 ## 2. Creating a simple `Hello World` project
 
-1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." then click "ok".
+1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select 'I don't have a prior version..' then click 'ok'.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.png" width="500">
 
-2. Next, you should be greeted by the following welcome page. Simply select "Create New Project".
+2. Next, you should be greeted by the following welcome page. Simply select 'Create New Project'.
  <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/startup_screen.png" width="500">
 
 3. The next screen you see should look something like this (although the 'Project SDK' box will likely be empty in yours -- so ignore that for the moment).
@@ -35,30 +35,36 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the 'new' button and select 'JDK' from the popup list. **You'll likely only need to do this once per machine, IDEA will remember any SDK's you've pointed it to for any future projects**.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup1.png" width="500">
 
-5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK JDK in section 1 (simply clicked next at each step) this box should already have detected and automatically selected the right folder from the tree. So click "Ok". Once closed, click "Next"
+5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK in section 1 (meaning you simply clicked next at each step) this box should already have detected and automatically selected the right folder from the tree. So click 'Ok'. Once closed, click 'Next'
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup2.png" width="400">
 
-6. Keep clicking "Next" until you get the following page
+6. Keep clicking 'Next' until you get the following page
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project.png" width="500">
 
-7. Give your project a name, preferably something clever like "hello" (because we're writing a hello world program). Once finished, click 'Finish'. 
+7. Give your project a name, preferably something clever like 'hello' (because we're writing a hello world program). Once finished, click 'Finish'. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project2.png" width="500">
 
 8. Once loaded, the you'll have a new, empty project -- and you're ready to start writing.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/empty_project.png" width="600">
 
-9. Now we'll create a class containing a `main` function that prints `hello world`, then run it. First, expand the `Hello` folder, revealing a blue `src` folder: this is where all of our code (and, optionally, packages) will be placed.
+9. Now we'll create a class containing a `main` function that prints `hello world`, then run it. To do this, first expand the `Hello` folder which should reveal an empty blue `src` folder: this is where all of our code will be placed.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class.png" width="300">
 
 10. Next, right click on the blue `src` folder and select `new > Java Class`
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class2.png" width="500">
 
-11. Give the class a name, and click 'ok'
+11. Give the class a name, and click 'ok' (note that Java classes start with a capital letter).
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class3.png" width="300">
 
-12. Now go ahead and write a `main` function with a print statement:
-<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/writing_code.png" width="300">
-If all is well, there should be no errors annotations (things underlined in red).
+12. Now write a `main` function with a print statement (like the one shown below). If all is well, there should be no error messages (such as things underlined in red).
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/writing_code.png" width="600">
+
+
+## 3. Running code
+
+Programs can be run in all Jetbrain IDEs through *run configurations*. We'll create a simple run configuration for our hello world program and will briefly discuss how run configurations support command line arguments.
+
+1. First, 
 
 
 
