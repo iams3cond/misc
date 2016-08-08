@@ -11,13 +11,13 @@ Consequently, this document is by no means intended to be a complete (or even pa
 
 This guide is therefore really only intended to help get the IDE downloaded, installed, and setup for a simple "Hello World" project. The pictures accompanying each step assume the current version of the community edition (2016.2.1).
 
-## Required downloads
+## 1. Required downloads
 
 You should download the latest version of the Java Development Kit (JDK) from [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) as well as the (free) community edition of the IDE itself, available to download [here](https://www.jetbrains.com/idea/#chooseYourEdition). The IDE supports windows, mac, and linux. 
 
 First install the JDK downloaded from Oracle's website. Once this is done, installation of IntelliJ should simply be a matter of clicking the .exe, .dmg, etc and following the default prompts (Note: If you're runnning linux *I think* you need to run the shell script `idea.sh` located in the tarball or whatever package you downloaded to get the installation rolling, though I could be wrong -- so consult Google for more help with that).
 
-## Creating a simple `Hello World` project
+## 2. Creating a simple `Hello World` project
 
 1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." and click "ok".
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.png" width="500">
@@ -31,8 +31,10 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the "new" button and select "JDK" from the popup list. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup1.png" width="500">
 
-5. This should bring up a dialog box (shown below). Assuming you just used the default values when installing JDK (simply clicked next at each step) this box should already have detected (selected) the appropriate, latest Java SDK. So click "Ok".
+5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK JDK in part 1 (simply clicked next at each step) this box should already have detected and selected the right folder from the tree. So all you have to do is click "Ok". 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup2.png" width="500">
+
+6. 
 
 
 
