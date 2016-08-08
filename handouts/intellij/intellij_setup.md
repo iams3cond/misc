@@ -72,10 +72,10 @@ Programs can be run in all Jetbrain IDEs through *run configurations*. We'll cre
 3. Give the run configuration a name (it can be anything -- but ideally will describe the sort of program you want to run). Then point IntelliJ to the class which contains the `main` function. In this case, that class is `Hello`.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code3.png" width="600">
 
-4. Click 'Ok' then press the green play button
+4. Click 'Ok' then press the green play button to run the program 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code4.png" width=500">
 
-5. The code should run
+5. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/run_results.png" width=500">
 
 
