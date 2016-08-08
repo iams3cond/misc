@@ -51,8 +51,14 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class.png" width="300">
 
 10. Next, right click on the blue `src` folder and select `new > Java Class`
-11. <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class2.png" width="500">
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class2.png" width="500">
 
+11. Give the class a name, and click 'ok'
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/creating_class3.png" width="300">
+
+12. Now go ahead and write a `main` function with a print statement:
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/writing_code.png" width="300">
+If all is well, there should be no errors annotations (things underlined in red).
 
 
 
