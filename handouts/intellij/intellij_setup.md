@@ -15,4 +15,10 @@ This guide is therefore really only intended to help get the IDE downloaded, ins
 
 You should download the latest version of the Java Development Kit (JDK) from [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) as well as the (free) community edition of the IDE itself, available to download [here](https://www.jetbrains.com/idea/#chooseYourEdition). The IDE supports windows, mac, and linux. 
 
-First install the JDK downloaded from Oracle's website. Once this is done, installation of IntelliJ should simply be a matter of clicking the executable, .dmg, etc and following the default prompts (Note: If you're runnning a linux distro *I think* you just need to run the shell script `idea.sh` located in the tarball or whatever package you downloaded to get the installation rolling, though I could be wrong -- so consult Google for more help with that).
+First install the JDK downloaded from Oracle's website. Once this is done, installation of IntelliJ should simply be a matter of clicking the .exe, .dmg, etc and following the default prompts (Note: If you're runnning linux *I think* you need to run the shell script `idea.sh` located in the tarball or whatever package you downloaded to get the installation rolling, though I could be wrong -- so consult Google for more help with that).
+
+## Creating a simple `Hello World` project
+
+1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." and click next.
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.jpg" width="400">
+
