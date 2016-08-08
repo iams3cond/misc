@@ -75,7 +75,6 @@ Programs can be run in all Jetbrain IDEs through *run configurations*. We'll cre
 4. Click 'Ok' then press the green play button to run the program 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code4.png" width=500">
 
-5. 
-<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/run_results.png" width=500">
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/run_results.png" width=700">
 
 
