@@ -20,5 +20,5 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 ## Creating a simple `Hello World` project
 
 1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." and click next.
-<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.jpg" width="400">
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.png" width="400">
 
