@@ -59,12 +59,23 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 12. Now write a `main` function with a print statement (like the one shown below). If all is well, there should be no error messages (such as things underlined in red).
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/writing_code.png" width="600">
 
-
 ## 3. Running code
 
-Programs can be run in all Jetbrain IDEs through *run configurations*. We'll create a simple run configuration for our hello world program and will briefly discuss how run configurations support command line arguments.
+Programs can be run in all Jetbrain IDEs through *run configurations*. We'll create a simple run configuration for our hello world program and will briefly demonstrate how run configurations can be used to simulate arguments passed through the command line.
 
-1. First, 
+1. First edit configurations
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code.png" width="600">
 
+2. Next, click the plus icon and 'Application'.
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code2.png" width="600">
+
+3. Give the run configuration a name (it can be anything -- but ideally will describe the sort of program you want to run). Then point IntelliJ to the class which contains the `main` function. In this case, that class is `Hello`.
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code3.png" width="600">
+
+4. Click 'Ok' then press the green play button
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code4.png" width=500">
+
+5. The code should run
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/run_results.png" width=500">
 
 
