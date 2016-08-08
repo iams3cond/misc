@@ -19,6 +19,20 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 
 ## Creating a simple `Hello World` project
 
-1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." and click next.
-<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.png" width="400">
+1. Upon first starting up the IDE, you might get a popup box asking if you want to import settings from a previous version, (unless you have a prior version) simply select "I don't have a prior version.." and click "ok".
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/intellij_import_mac.png" width="500">
+
+2. Next, you should be greeted by the following welcome page. Simply select "Create New Project".
+ <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/startup_screen.png" width="500">
+
+3. The next screen you see should look something like this (although you the "Project SDK" will likely be empty in yours -- so ignore that for the moment).
+ <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup_page.png" width="500">
+
+4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the "new" button and select "JDK" from the popup list. 
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup1.png" width="500">
+
+5. This should bring up a dialog box (shown below). Assuming you just used the default values when installing JDK (simply clicked next at each step) this box should already have detected (selected) the appropriate, latest Java SDK. So click "Ok".
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup2.png" width="500">
+
+
 
