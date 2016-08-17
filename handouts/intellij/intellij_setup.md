@@ -81,3 +81,5 @@ You should see a terminal pop up showing your hello world message.
 
 Run configurations also allow you to dictate which specific command line arguments the application should be run with. For example, say we changed our hello world program to look like this:
 
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/arg-reliant-prog.png" width=700">
+
