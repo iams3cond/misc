@@ -95,9 +95,9 @@ I'll reserve this final section for further additions discussing other miscellan
 
 ### Theming 
 
-Many prefer a darker color scheme as it tends to be a little easier on the eyes over long periods of time many spent huddled over a keyboard. IntelliJ comes with one alternative scheme called `Darcula` that does just what it sounds like: reskins the editor where code is written along with all panels and menus to a nice, darker, easy-on-the-eyes, color. 
+Many prefer a darker color scheme as it tends to be a little easier on the eyes over long periods of time. IntelliJ comes with one alternative scheme called `Darcula` that reskins the editor, panels, and menus to a nice, darker, easy-on-the-eyes, color. 
 
-Here are two (big) shots comparing the themes.
+Here are two screenshots comparing the themes.
 
 #### Light (default)
 
