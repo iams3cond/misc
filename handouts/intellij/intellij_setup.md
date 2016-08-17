@@ -79,7 +79,16 @@ You should see a terminal pop up showing your hello world message.
 
 ### Running Code with Arguments
 
-Run configurations also allow you to dictate which specific command line arguments the application should be run with. For example, say we changed our hello world program to look like this:
+Run configurations also allow you to dictate custom arguments the application should be run with. For example, say we changed our hello world program to look like this:
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/arg-reliant-prog.png" width=700">
+
+Here, the main program will only print hello world assuming the user passes the flag `-sayhello` as an argument. To do this, re-open the run application we've already made for our hello world program, and add the following.
+
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sayhello.png" width=600">
+
+That is, anything entered into the 'Program Arguments' textbox in the configuration menu will be parsed and added to the string `args` array that serves as a parameter to class's `main` function.
+
+## 4. Some tips and tricks
+
 
