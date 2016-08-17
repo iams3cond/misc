@@ -89,6 +89,17 @@ Here, the main program will only print hello world assuming the user passes the 
 
 That is, anything entered into the 'Program Arguments' textbox in the configuration menu will be parsed and added to the string `args` array that serves as a parameter to class's `main` function.
 
-## 4. Some tips and tricks
+## 4. Some tips and tricks (*Under construction)
+
+I'll reserve this final section for further additions discussing other miscellaneous features of the IDE that might come in handy.
+
+### Theming 
+
+Many prefer a darker color scheme as it tends to be a little easier on the eyes over long periods of time many spend huddled over keyboards. IntelliJ comes packaged with one such scheme called `Darcula` that does just that: reskins the editor, all panels and menus to be a nice, darker color. 
+
+Here are two shots comparing the themes. 
+
+
+
 
 
