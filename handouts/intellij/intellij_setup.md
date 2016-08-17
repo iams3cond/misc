@@ -74,7 +74,10 @@ Programs can be run in all Jetbrain IDEs through *run configurations*. In this p
 
 4. Click 'Ok' then press the green play button to run the program 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code4.png" width=500">
-
+You should see a terminal pop up showing your hello world message.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/run_results.png" width=700">
 
+## Supplying Program Arguments
+
+Run configurations also allow you to dictate which specific command line arguments the application should be run with. For example, say we changed our hello world program to look like this:
 
