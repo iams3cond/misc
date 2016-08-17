@@ -41,7 +41,7 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 6. Keep clicking 'Next' until you get the following page
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project.png" width="500">
 
-7. Give your project a name, preferably something clever like 'hello' (because we're writing a hello world program). Once finished, click 'Finish'. 
+7. Give your project a name, preferably something clever like 'hello'. Once finished, click 'Finish'. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/naming_project2.png" width="500">
 
 8. Once loaded, the you'll have a new, empty project -- and you're ready to start writing.
