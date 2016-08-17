@@ -17,7 +17,7 @@ You should download the latest version of the Java Development Kit (JDK) from [h
 
 |A note on the ulimate edition|
 |-------------|
-|*If your a student, I believe it's possible to obtain a year long license to the ultimate edition for free, though if I recall correctly you'll need to provide your Clemson email address (as proof I suppose). You'll have to do some digging on the Jetbrains website to find out how to initiate this. Needless to say, you won't need the ulimate edition for anything in this course, so it's probably best (re: faster/easier) to stick with the community edition -- which for all intents and purposes is exactly the same core IDE minus support for several web development frameworks (play, grail, react js, etc).*|
+|*If your a student, I believe it's possible to obtain a year long license to the ultimate edition for free, though if I recall correctly you'll need to provide your Clemson email address (as proof I suppose). You'll have to do some digging on the Jetbrains website to find out how to initiate this. Needless to say, you won't need the ultimate edition for anything in this course, so it's probably best (re: faster/easier) to stick with the community edition -- which for all intents and purposes is exactly the same core IDE minus support for several web development frameworks (play, grail, react js, etc).*|
 
 First install the JDK downloaded from Oracle's website. Once this is done, installation of IntelliJ should simply be a matter of clicking the .exe, .dmg, etc and following the default prompts (Note: If you're runnning Linux *I think* you need to run the shell script `idea.sh` located in the tarball or whatever package you downloaded to get the installation rolling, though I could be wrong -- so consult Google for more help with that).
 
@@ -29,7 +29,7 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 2. Next, you should be greeted by the following welcome page. Simply select 'Create New Project'.
  <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/startup_screen.png" width="500">
 
-3. The next screen you see should look something like this (although the 'Project SDK' box will likely be empty in yours -- so ignore that for the moment).
+3. The next screen you see should look something like this (for now, its O.K. if the 'Project SDK' box is empty).
  <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup_page.png" width="500">
 
 4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the 'new' button and select 'JDK' from the popup list. **You'll likely only need to do this once per machine, IDEA will remember any SDK's you've pointed it to for any future projects**.
@@ -61,7 +61,7 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 
 ## 3. Running code
 
-Programs can be run in all Jetbrain IDEs through *run configurations*. We'll create a simple run configuration for our hello world program and will briefly demonstrate how run configurations can be used to simulate arguments passed through the command line.
+Programs can be run in all Jetbrain IDEs through *run configurations*. In this part of the walkthrough we'll create a simple run configuration for our hello world program then show how run configurations can be used to simulate arguments passed through the command line.
 
 1. 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/running_code.png" width="600">
