@@ -32,7 +32,7 @@ First install the JDK downloaded from Oracle's website. Once this is done, insta
 3. The next screen you see should look something like this (for now, its O.K. if the 'Project SDK' box is empty).
  <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup_page.png" width="500">
 
-4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use (for libraries and so forth). So click the 'new' button and select 'JDK' from the popup list. **You'll likely only need to do this once per machine, IDEA will remember any SDK's you've pointed it to for any future projects**.
+4. Now we need to tell the IDE which version of the Java SDK (software development kit) we want it to use for libraries and so forth. So click the 'new' button and select 'JDK' from the popup list. **You'll likely only need to do this once per machine, IDEA will remember any SDK's you've pointed it to for any future projects**.
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/sdk_setup1.png" width="500">
 
 5. This should bring up a another dialog box (shown below). Assuming you just used the default values when installing the java JDK in section 1 (meaning you simply clicked next at each step) this box should already have detected and automatically selected the right folder from the tree. So click 'Ok'. Once closed, click 'Next'
