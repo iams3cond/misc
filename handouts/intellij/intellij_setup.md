@@ -89,7 +89,7 @@ Here, the main program will only print hello world assuming the user passes the 
 
 That is, anything entered into the 'Program Arguments' textbox in the configuration menu will be parsed and added to the string `args` array that serves as a parameter to class's `main` function.
 
-## 4. Some tips and tricks (*Under construction)
+## 4. Some tips and tricks *Under construction
 
 I'll reserve this final section for further additions discussing other miscellaneous features of the IDE that might come in handy.
 
@@ -110,4 +110,4 @@ Finally, here is the relevant option for deciding which one you want in the pref
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/lightordark.png" width=600">
 
-
+### Refactor-rename: quick and dirty
