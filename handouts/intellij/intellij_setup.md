@@ -106,6 +106,8 @@ Here are two (big) shots comparing the themes.
 #### Darkula (in the options/preferences panel)
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/dark.png" width=800">
 
+Finally, here is the relevant option for deciding which one you want in the preferences panel (if you don't know how to get here read [this](https://www.jetbrains.com/help/idea/2016.2/settings-preferences-dialog.html).
 
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/figs/lightordark.png" width=600">
 
 
