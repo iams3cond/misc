@@ -83,15 +83,12 @@ So when all is said and done, your project pane should look like this (folder co
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/tests_pkg.png" width="500">
 
-#### Aside: marking folders
-
-IntelliJ uses [marked directories (or, in IntelliJ speak: 'Content Roots')](https://www.jetbrains.com/help/idea/2016.2/configuring-content-roots.html) as a means of distinguishing certain folders based on type of files they contain. For example, when you create a project, you've probably noticed that there is already a blue `src` folder created for you. This indicates a directory where all of your source files (`*.java` and Java packages) should be placed. 
-
-As explained above, the green folders indicate/distinguish the high level directory where all your tests will live. These can also (of course) contain `*.java` files and Java packages. 
-
-|A note on marked directories|
+|Aside: marked directories|
 |-------------|
-|*It is rare to have one marked directory within another.. That is, they should exist independently at the top level of your project (i.e.: they should almost always only be the immediate children of the top level project directory -- in this tutorial, 'top-level project directory' folder is named 'Calculator' ... not to be confused with the class!)*|
+|*IntelliJ uses [marked directories (or, in IntelliJ speak: 'Content Roots')](https://www.jetbrains.com/help/idea/2016.2/configuring-content-roots.html) as a means of distinguishing certain folders based on type of files they contain. 
+Blue `src` folders are typically created for you when you start a new project. This is where all of your source files (`*.java` and Java packages) should be placed. 
+Green folders indicate/distinguish the high level directory where all your tests will live. These can also (of course) contain `*.java` files and Java packages. 
+It is rare to have one 'marked' directory within another.. That is, they should exist independently at the top level of your project (i.e.: they should almost always be the immediate children of the top level project directory -- which in the case of this tutorial, is the folder named 'Calculator' ... not to be confused with the Java class!)*|
 
 ### Writing tests
 
@@ -143,3 +140,28 @@ public class TestCalculator extends TestCase {
     /* same as previous ... */
 }
 ```
+
+### Executing the tests in `TestCalculator`
+
+Now we want to run this test class to see if the assertions we make in our `@Test` methods hold. Running this is a lot like running your programs in IntelliJ -- that is you will need to create a run JUnit run-configuration for the class your trying to test.
+
+To do so, first select new configuration:
+
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/runconfig1.png" width="500">
+
+click the plus icon and select `JUnit`:
+
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/runconfig2.png" width="500">
+
+In the configuration menu that pops up, give the configuration a name, and point it to your `TestCalculator` class.
+
+#### Aside: build systems and package-wide testing
+Exploring some of the options in this configuration screen, you'll notice that you can also create configurations capable of automatically finding and testing all test classes/fixtures in a given package (as well its sub-packages). Build systems such as Maven and Gradle do this automatically as part of their project build steps. So called dependency management and build systems like these are extremely powerful and useful, but also come with their own set of quirks and complexity and are overall a whole other topic in their right. For instance, you could spend entire years trying to understand and learn the ins-and-outs of Maven -- not that anybody should!
+
+
+
+
+
+
+
+
