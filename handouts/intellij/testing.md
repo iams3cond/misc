@@ -63,8 +63,31 @@ Some of these might seem pretty picky at first, but once you've started writing 
 
 ### Create a 'tests' directory
 
-In the left-hand-side 'project pane', on the same level as the blue `src` folder, right click on the `Calculator` folder and create a new directory called `tests`.
+In the left-hand-side 'project pane', on the same level as the blue `src` folder, right click our project's top-level `Calculator` folder and create a new sub directory called `tests`.
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/tests_folder.png" width="500">
 
-Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. 
+Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. To do this, go to the project structure pane (located here):
+
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/project_structure.png" width="500">
+
+With the project structure window open, navigate to 'modules' then select the `tests` folder you created from the hierarchy, then click the green `Tests` folder icon next to "Mark as: ..". You should see the tests folder you created turn green, indicating that this is where all of your test classes will live.
+
+Once the tests directory has been created **and** marked, right click and add a package that mirrors the one create in the blue `src` folder. Then create a class called `TestCalculator` within this package.
+
+When all is said and done your project pane should look like this (folder colors and all):
+
+
+
+#### Aside: marking folders
+
+IntelliJ uses [marked directories/content roots](https://www.jetbrains.com/help/idea/2016.2/configuring-content-roots.html)) as a means of distinguishing certain folders based on type of files they contain. For example, when you create a project, you've probably noticed that there is already a blue `src` folder created for you. This indicates a directory where all of your source files (`*.java` and Java packages) should be placed. 
+
+As explained above, the green folders indicate/distinguish the high level directory where all your tests will live. These can also (of course) contain `*.java` files and Java packages. 
+
+|A note on marked directories|
+|-------------|
+|*It is rare to have one marked directory (i.e.: a colored folder contained within another.. That is, they usually exist at the top level of your project (i.e.: they should almost always only be the immediate children of the top level project directory -- in this tutorial that folder is named 'Calculator'; not to be confused with the class!)*|
+
+
+
