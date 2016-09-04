@@ -63,7 +63,7 @@ Some of these might seem pretty picky at first, but once you've started writing 
 
 ### Create a 'tests' directory
 
-In the left-hand-side 'project pane', on the same level as the blue `src` folder, right click on the `Calculator` folder and create a new directory called `tests`.
+In the left-hand-side 'project pane', on the same level as the blue `src` folder, right click our project's top-level `Calculator` folder and create a new sub directory called `tests`.
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/tests_folder.png" width="500">
 
@@ -75,9 +75,13 @@ With the project structure window open, navigate to 'modules' then select the `t
 
 #### Aside: marking folders
 
-IntelliJ using marked folders to distinguish certain directories. For example, when you create a project, you've probably noticed that there is already a blue `src` folder created for you. This indicates a directory where all of your `*.java` and Java packages will be placed. 
+IntelliJ uses marked directories as a means of to distinguishing certain folders based on the content they contain. For example, when you create a project, you've probably noticed that there is already a blue `src` folder created for you. This indicates a directory where all of your source files (`*.java` and Java packages) should be placed. 
 
-As explained above, the green folders indicate/mark a 'top-level' project directory where all your tests live. These can also (of course) contain `*.java` files and Java packages. 
+As explained above, the green folders indicate/distinguish the high level directory where all your tests will live. These can also (of course) contain `*.java` files and Java packages. 
 
-*It is rare to have one blue src folder contained within another.. That is, they usually exist at the top level of your project (i.e.: they should almost always only be the immediate children of the top level project directory -- in this tutorial that folder is named 'Calculator' -- not to be confused with the class!) 
+|A note on marked directories|
+|-------------|
+|*It is rare to have one marked directory (i.e.: a colored folder contained within another.. That is, they usually exist at the top level of your project (i.e.: they should almost always only be the immediate children of the top level project directory -- in this tutorial that folder is named 'Calculator'; not to be confused with the class!)*|
+
+
 
