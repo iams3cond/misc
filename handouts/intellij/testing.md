@@ -67,7 +67,7 @@ In the left-hand-side 'project pane', on the same level as the blue `src` folder
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/tests_folder.png" width="500">
 
-Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. To do this, go to the project structure pane (located here):
+Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. To do this, click the project structure icon located in the upper right hand corner of the IDE:
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/project_structure.png" width="500">
 
