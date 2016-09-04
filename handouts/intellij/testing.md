@@ -10,7 +10,7 @@ We'll create a new project with a package containing a simple calculator class, 
 
 ### Setup
 
-Fire up IntelliJ and create a new Java project called `Calculator`. Once you've gotten through all of the introductory matter and your new (empty) Calculator project is loaded up waiting, go to the 'project' pane and right-click the blue `src` folder. Then select the new Package option:
+Fire up IntelliJ and create a new Java project called `Calculator`. Once you've gotten through all of the introductory matter and your new (empty) Calculator project is loaded up and waiting, go to the left-side 'project' pane and right-click the blue `src` folder. Then select the new Package option:
 
 
 Create the following package structure when the dialog box appears (note that IJ will conveniently interpret usage of `.` in the name chosen as a nested package/folder):
