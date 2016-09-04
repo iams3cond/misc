@@ -156,7 +156,7 @@ In the configuration menu that pops up, give the configuration a name, and point
 
 |Aside: package wide testing & dependency management systems|
 |-------------|
-*Exploring some of the options in this configuration screen, you'll notice that you can also create configurations capable of automatically finding and testing all JUnit test classes in a given package (as well its sub-packages). Build systems such as [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/), if configured to do so, will automatically invoke tests like these as projects are deployed/compiled. These so called dependency management and build systems are extremely powerful and useful, but often come with a steep learning curve and are thus overall a whole other topic in their right. I'm sure one could spend entire years trying to understand and learn all the ins-and-outs of Maven -- which I'm not sure that I advocate..*|
+*Exploring some of the options in this configuration screen, you'll notice that you can also create configurations capable of automatically finding and testing all JUnit test classes in a given package (as well its sub-packages). Build systems such as [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/), if configured to do so, will automatically invoke tests like these as projects are deployed/compiled. These so called dependency management and build systems are extremely powerful and useful, but often come with a steep learning curve and are thus a whole other topic in their own right.*|
 
 Now that we have a JUnit run configuration, all we have to do is press the green play button next to it to run our tests:
 
