@@ -117,8 +117,27 @@ public class TestCalculator extends TestCase {
 }
 ```
 
-Once you've copied (or perhaps as you're typing the above) you'll notice that IntelliJ doesn't recognize some of the things you're saying:
+Once you've copied (or perhaps as you're typing the above) you'll notice that IntelliJ doesn't really seem to know what JUnit is, or what you're trying to say:
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/junit_error.png" width="500">
 
+To fix this, you need to add a version of JUnit to your classpath. One easy way to do this is to simply click the cursor on one of the red pieces of text such as the `@Test` annotation then press `alt + enter` and it will bring up a box asking if you want to add JUnit4 (or 3, either is fine) to the classpath -- click that.
 
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/add_to_classpath.png" width="500">
+
+If a box pops up asking you something along the lines of which distribution of JUnit you'd like to use, just select the one from "IntelliJ IDEA distribution".
+
+Once this is done, copy and paste the following imports to you `TestCalculator` class, so it should look like this:
+
+```java
+import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class TestCalculator extends TestCase {
+    ...
+}
+```
