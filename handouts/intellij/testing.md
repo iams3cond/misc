@@ -85,10 +85,7 @@ So when all is said and done, your project pane should look like this (folder co
 
 |Aside: marked directories|
 |-------------|
-|*IntelliJ uses [marked directories (or, in IntelliJ speak: 'Content Roots')](https://www.jetbrains.com/help/idea/2016.2/configuring-content-roots.html) as a means of distinguishing certain folders based on type of files they contain. 
-Blue `src` folders are typically created for you when you start a new project. This is where all of your source files (`*.java` and Java packages) should be placed. 
-Green folders indicate/distinguish the high level directory where all your tests will live. These can also (of course) contain `*.java` files and Java packages. 
-It is rare to have one 'marked' directory within another.. That is, they should exist independently at the top level of your project (i.e.: they should almost always be the immediate children of the top level project directory -- which in the case of this tutorial, is the folder named 'Calculator' ... not to be confused with the Java class!)*|
+|*IntelliJ uses [marked directories (or, in IntelliJ speak: 'Content Roots')](https://www.jetbrains.com/help/idea/2016.2/configuring-content-roots.html) as a means of distinguishing certain folders based on type of files they contain. Blue `src` folders are typically created for you when you start a new project. This is where all of your source files (.java and Java packages) should be placed, while green folders distinguish the outermost directory where all your tests will live (which can also -- of course -- contain `.java` files and Java packages). It is rare to have one 'marked' directory within another.. That is, they should exist independently at the top level of your project (i.e.: they should almost always be the immediate children of the top level project directory -- which in the case of this tutorial, is the folder named 'Calculator' ... not to be confused with the Java class!)*|
 
 ### Writing tests
 
@@ -143,7 +140,7 @@ public class TestCalculator extends TestCase {
 
 ### Executing the tests in `TestCalculator`
 
-Now we want to run this test class to see if the assertions we make in our `@Test` methods hold. Running this is a lot like running your programs in IntelliJ -- that is you will need to create a run JUnit run-configuration for the class your trying to test.
+Now we want to run this test class to see if the assertions we make in our `@Test` methods hold. Doing so is a lot like running ordinary programs in IntelliJ -- that is, you will need to create a JUnit specific run-configuration for the class (or classes) you're trying to test.
 
 To do so, first select new configuration:
 
@@ -155,13 +152,19 @@ click the plus icon and select `JUnit`:
 
 In the configuration menu that pops up, give the configuration a name, and point it to your `TestCalculator` class.
 
-#### Aside: build systems and package-wide testing
-Exploring some of the options in this configuration screen, you'll notice that you can also create configurations capable of automatically finding and testing all test classes/fixtures in a given package (as well its sub-packages). Build systems such as Maven and Gradle do this automatically as part of their project build steps. So called dependency management and build systems like these are extremely powerful and useful, but also come with their own set of quirks and complexity and are overall a whole other topic in their right. For instance, you could spend entire years trying to understand and learn the ins-and-outs of Maven -- not that anybody should!
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/runconfig3.png" width="500">
 
+|Aside: package wide testing & dependency management systems|
+|-------------|
+*Exploring some of the options in this configuration screen, you'll notice that you can also create configurations capable of automatically finding and testing all JUnit test classes in a given package (as well its sub-packages). Build systems such as [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/), if configured to do so, will automatically invoke tests like these as projects are deployed/compiled. These so called dependency management and build systems are extremely powerful and useful, but often come with a steep learning curve and are thus overall a whole other topic in their right. I'm sure one could spend entire years trying to understand and learn all the ins-and-outs of Maven -- which I'm not sure that I advocate..*|
 
+Now that we have a JUnit run configuration, all we have to do is press the green play button next to it to run our tests:
 
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/runconfig4.png" width="500">
 
+All green should make you feel good, as it indicates that your class (or classes) pass their test cases :)  
 
+Note if you're too lazy (I am usually) to manually create the run configuration, IntelliJ will automatically construct one for you if you simply click the circular play button next to the class definition for `TestCalculator`:
 
-
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/lazy.png" width="800">
 
