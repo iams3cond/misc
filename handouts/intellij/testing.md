@@ -20,3 +20,24 @@ Create the following package structure when the dialog box appears (note that IJ
 
 ### Class `Calculator`
 
+Right click inside this package and create a new class called `Calculator`:
+
+```java
+public class Calculator {
+
+    public int add(int x, int y) { return x + y; }
+    
+    public int mult(int x, int y) { return x * y; }
+}
+```
+
+Prior to the existence of testing frameworks like JUnit, one might've also included a `main()` in this program that looks something like this:
+```java
+public static void main(String[] args) {
+    Calculator calc = new Calculator();
+    // test add
+    if (calc.add(3, 4) != 7) { System.err.println("error: add(3, 4)"); }
+    if (calc.add(0, 4) != 4) { System.err.println("error: add(0, 4)"); }
+    ...
+}
+```
