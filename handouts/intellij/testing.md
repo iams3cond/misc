@@ -67,4 +67,17 @@ In the left-hand-side 'project pane', on the same level as the blue `src` folder
 
 <img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/tests_folder.png" width="500">
 
-Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. 
+Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. To do this, go to the project structure pane (located here):
+
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/project_structure.png" width="500">
+
+With the project structure window open, navigate to 'modules' then select the `tests` folder you created from the hierarchy, then click the green `Tests` folder icon next to "Mark as: ..". You should see the tests folder you created turn green, indicating that this is where all of your test classes will live.
+
+#### Aside: marking folders
+
+IntelliJ using marked folders to distinguish certain directories. For example, when you create a project, you've probably noticed that there is already a blue `src` folder created for you. This indicates a directory where all of your `*.java` and Java packages will be placed. 
+
+As explained above, the green folders indicate/mark a 'top-level' project directory where all your tests live. These can also (of course) contain `*.java` files and Java packages. 
+
+*It is rare to have one blue src folder contained within another.. That is, they usually exist at the top level of your project (i.e.: they should almost always only be the immediate children of the top level project directory -- in this tutorial that folder is named 'Calculator' -- not to be confused with the class!) 
+
