@@ -59,5 +59,12 @@ I'd argue this an ad-hoc approach for several reasons:
 
 * When your code is deployed and built, if class `Calculator` is merely used by other classes, and does not serve as the main entrypoint, its `main` will never get executed when the final jar containing the project is constructed -- and hence the tests you worked so hard on won't get invoked automatically when its time to deploy -- what if bugs have creeped in since the last time that particular `main()` was invoked?
 
-Some of these might seem pretty picky at first, but once you've started writing some tests in JUnit, you'll hopefully begin to appreciate all that it offers over this ('bad-old-days') approach.
+Some of these might seem pretty picky at first, but once you've started writing some tests in JUnit, you'll hopefully begin to recognize and appreciate some of the advantages it offers over the above.
 
+### Create a 'tests' directory
+
+In the left-hand-side 'project pane', on the same level as the blue `src` folder, right click on the `Calculator` folder and create a new directory called `tests`.
+
+<img src="https://github.com/dtwelch/misc/blob/master/handouts/intellij/testing_figs/tests_folder.png" width="500">
+
+Now we're going to 'mark' this folder as a special directory where **all** tests for the classes in our project will be placed. 
